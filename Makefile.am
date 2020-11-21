@@ -44,39 +44,6 @@ clean-local:
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = protobuf.pc protobuf-lite.pc
 
-ruby_EXTRA_DIST=                                                             \
-  ruby/Gemfile                                                               \
-  ruby/Gemfile.lock                                                          \
-  ruby/.gitignore                                                            \
-  ruby/README.md                                                             \
-  ruby/Rakefile                                                              \
-  ruby/ext/google/protobuf_c/defs.c                                          \
-  ruby/ext/google/protobuf_c/encode_decode.c                                 \
-  ruby/ext/google/protobuf_c/extconf.rb                                      \
-  ruby/ext/google/protobuf_c/map.c                                           \
-  ruby/ext/google/protobuf_c/message.c                                       \
-  ruby/ext/google/protobuf_c/protobuf.c                                      \
-  ruby/ext/google/protobuf_c/protobuf.h                                      \
-  ruby/ext/google/protobuf_c/repeated_field.c                                \
-  ruby/ext/google/protobuf_c/storage.c                                       \
-  ruby/ext/google/protobuf_c/upb.c                                           \
-  ruby/ext/google/protobuf_c/upb.h                                           \
-  ruby/google-protobuf.gemspec                                               \
-  ruby/lib/google/protobuf/message_exts.rb                                   \
-  ruby/lib/google/protobuf/repeated_field.rb                                 \
-  ruby/lib/google/protobuf/well_known_types.rb                               \
-  ruby/lib/google/protobuf.rb                                                \
-  ruby/pom.xml                                                               \
-  ruby/src/main/sentinel.proto                                               \
-  ruby/tests/basic.rb                                                        \
-  ruby/tests/repeated_field_test.rb                                          \
-  ruby/tests/stress.rb                                                       \
-  ruby/tests/generated_code.proto                                            \
-  ruby/tests/test_import.proto                                               \
-  ruby/tests/generated_code_test.rb                                          \
-  ruby/tests/well_known_types_test.rb                                        \
-  ruby/travis-test.sh
-
 js_EXTRA_DIST=                              \
   js/README.md                              \
   js/binary/arith.js                        \
@@ -122,7 +89,7 @@ js_EXTRA_DIST=                              \
   js/testbinary.proto                       \
   js/testempty.proto
 
-all_EXTRA_DIST=$(ruby_EXTRA_DIST) $(js_EXTRA_DIST)
+all_EXTRA_DIST=$(js_EXTRA_DIST)
 
 EXTRA_DIST = $(@DIST_LANG@_EXTRA_DIST)   \
   autogen.sh                             \

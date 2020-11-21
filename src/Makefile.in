@@ -266,8 +266,7 @@ am_libprotoc_la_OBJECTS = google/protobuf/compiler/code_generator.lo \
 	google/protobuf/compiler/cpp/cpp_primitive_field.lo \
 	google/protobuf/compiler/cpp/cpp_service.lo \
 	google/protobuf/compiler/cpp/cpp_string_field.lo \
-	google/protobuf/compiler/js/js_generator.lo \
-	google/protobuf/compiler/ruby/ruby_generator.lo
+	google/protobuf/compiler/js/js_generator.lo
 libprotoc_la_OBJECTS = $(am_libprotoc_la_OBJECTS)
 libprotoc_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
@@ -493,7 +492,6 @@ am_protobuf_test_OBJECTS = google/protobuf/stubs/protobuf_test-bytestream_unitte
 	google/protobuf/compiler/cpp/protobuf_test-cpp_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT) \
-	google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.$(OBJEXT) \
 	google/protobuf/util/protobuf_test-field_comparator_test.$(OBJEXT) \
 	google/protobuf/util/protobuf_test-field_mask_util_test.$(OBJEXT) \
 	google/protobuf/util/internal/protobuf_test-default_value_objectwriter_test.$(OBJEXT) \
@@ -738,7 +736,6 @@ am__nobase_include_HEADERS_DIST =  \
 	google/protobuf/compiler/plugin.pb.h \
 	google/protobuf/compiler/cpp/cpp_generator.h \
 	google/protobuf/compiler/js/js_generator.h \
-	google/protobuf/compiler/ruby/ruby_generator.h \
 	google/protobuf/util/type_resolver.h \
 	google/protobuf/util/field_comparator.h \
 	google/protobuf/util/field_mask_util.h \
@@ -1219,7 +1216,6 @@ nobase_include_HEADERS = \
   google/protobuf/compiler/plugin.pb.h                          \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
   google/protobuf/compiler/js/js_generator.h                    \
-  google/protobuf/compiler/ruby/ruby_generator.h                \
   google/protobuf/util/type_resolver.h                          \
   google/protobuf/util/field_comparator.h                       \
   google/protobuf/util/field_mask_util.h                        \
@@ -1390,8 +1386,7 @@ libprotoc_la_SOURCES = \
   google/protobuf/compiler/cpp/cpp_service.h                   \
   google/protobuf/compiler/cpp/cpp_string_field.cc             \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
-  google/protobuf/compiler/js/js_generator.cc                  \
-  google/protobuf/compiler/ruby/ruby_generator.cc
+  google/protobuf/compiler/js/js_generator.cc
 
 protoc_LDADD = $(PTHREAD_LIBS) libprotobuf.la libprotoc.la
 protoc_SOURCES = google/protobuf/compiler/main.cc
@@ -1466,8 +1461,6 @@ EXTRA_DIST = \
   google/protobuf/package_info.h                               \
   google/protobuf/io/package_info.h                            \
   google/protobuf/util/package_info.h                          \
-  google/protobuf/compiler/ruby/ruby_generated_code.proto      \
-  google/protobuf/compiler/ruby/ruby_generated_code_pb.rb      \
   google/protobuf/compiler/package_info.h                      \
   google/protobuf/compiler/zip_output_unittest.sh              \
   README.md
@@ -1647,7 +1640,6 @@ protobuf_test_SOURCES = \
   google/protobuf/compiler/cpp/cpp_unittest.cc                 \
   google/protobuf/compiler/cpp/cpp_plugin_unittest.cc          \
   google/protobuf/compiler/cpp/metadata_test.cc                \
-  google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \
   google/protobuf/util/field_comparator_test.cc                \
   google/protobuf/util/field_mask_util_test.cc                 \
   google/protobuf/util/internal/default_value_objectwriter_test.cc \
@@ -2123,15 +2115,6 @@ google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp):
 google/protobuf/compiler/js/js_generator.lo:  \
 	google/protobuf/compiler/js/$(am__dirstamp) \
 	google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/ruby/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/ruby
-	@: > google/protobuf/compiler/ruby/$(am__dirstamp)
-google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/ruby/$(DEPDIR)
-	@: > google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/ruby/ruby_generator.lo:  \
-	google/protobuf/compiler/ruby/$(am__dirstamp) \
-	google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp)
 
 libprotoc.la: $(libprotoc_la_OBJECTS) $(libprotoc_la_DEPENDENCIES) $(EXTRA_libprotoc_la_DEPENDENCIES)
 	$(AM_V_CXXLD)$(libprotoc_la_LINK) -rpath $(libdir) $(libprotoc_la_OBJECTS) $(libprotoc_la_LIBADD) $(LIBS)
@@ -2716,9 +2699,6 @@ google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT):  \
 google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT):  \
 	google/protobuf/compiler/cpp/$(am__dirstamp) \
 	google/protobuf/compiler/cpp/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.$(OBJEXT):  \
-	google/protobuf/compiler/ruby/$(am__dirstamp) \
-	google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/util/protobuf_test-field_comparator_test.$(OBJEXT):  \
 	google/protobuf/util/$(am__dirstamp) \
 	google/protobuf/util/$(DEPDIR)/$(am__dirstamp)
@@ -2957,8 +2937,6 @@ mostlyclean-compile:
 	-rm -f google/protobuf/compiler/cpp/*.lo
 	-rm -f google/protobuf/compiler/js/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/js/*.lo
-	-rm -f google/protobuf/compiler/ruby/*.$(OBJEXT)
-	-rm -f google/protobuf/compiler/ruby/*.lo
 	-rm -f google/protobuf/io/*.$(OBJEXT)
 	-rm -f google/protobuf/io/*.lo
 	-rm -f google/protobuf/stubs/*.$(OBJEXT)
@@ -3186,8 +3164,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/cpp/$(DEPDIR)/protobuf_test-cpp_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/cpp/$(DEPDIR)/protobuf_test-metadata_test.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/js/$(DEPDIR)/js_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/ruby/$(DEPDIR)/ruby_generator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/io/$(DEPDIR)/coded_stream.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/io/$(DEPDIR)/gzip_stream.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/io/$(DEPDIR)/printer.Plo@am__quote@
@@ -5655,20 +5631,6 @@ google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj: google/protobuf/co
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj `if test -f 'google/protobuf/compiler/cpp/metadata_test.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/cpp/metadata_test.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/cpp/metadata_test.cc'; fi`
 
-google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.o: google/protobuf/compiler/ruby/ruby_generator_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.o -MD -MP -MF google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Tpo -c -o google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.o `test -f 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/ruby/ruby_generator_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Tpo google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/ruby/ruby_generator_unittest.cc' object='google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.o `test -f 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/ruby/ruby_generator_unittest.cc
-
-google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.obj: google/protobuf/compiler/ruby/ruby_generator_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.obj -MD -MP -MF google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Tpo -c -o google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.obj `if test -f 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Tpo google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/ruby/ruby_generator_unittest.cc' object='google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.obj `if test -f 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/ruby/ruby_generator_unittest.cc'; fi`
-
 google/protobuf/util/protobuf_test-field_comparator_test.o: google/protobuf/util/field_comparator_test.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/util/protobuf_test-field_comparator_test.o -MD -MP -MF google/protobuf/util/$(DEPDIR)/protobuf_test-field_comparator_test.Tpo -c -o google/protobuf/util/protobuf_test-field_comparator_test.o `test -f 'google/protobuf/util/field_comparator_test.cc' || echo '$(srcdir)/'`google/protobuf/util/field_comparator_test.cc
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/util/$(DEPDIR)/protobuf_test-field_comparator_test.Tpo google/protobuf/util/$(DEPDIR)/protobuf_test-field_comparator_test.Po
@@ -6602,7 +6564,6 @@ clean-libtool:
 	-rm -rf google/protobuf/compiler/.libs google/protobuf/compiler/_libs
 	-rm -rf google/protobuf/compiler/cpp/.libs google/protobuf/compiler/cpp/_libs
 	-rm -rf google/protobuf/compiler/js/.libs google/protobuf/compiler/js/_libs
-	-rm -rf google/protobuf/compiler/ruby/.libs google/protobuf/compiler/ruby/_libs
 	-rm -rf google/protobuf/io/.libs google/protobuf/io/_libs
 	-rm -rf google/protobuf/stubs/.libs google/protobuf/stubs/_libs
 	-rm -rf google/protobuf/util/.libs google/protobuf/util/_libs
@@ -6994,8 +6955,6 @@ distclean-generic:
 	-rm -f google/protobuf/compiler/cpp/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/ruby/$(am__dirstamp)
 	-rm -f google/protobuf/io/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/io/$(am__dirstamp)
 	-rm -f google/protobuf/stubs/$(DEPDIR)/$(am__dirstamp)
@@ -7020,7 +6979,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 	clean-libLTLIBRARIES clean-libtool clean-local mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -7067,7 +7026,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

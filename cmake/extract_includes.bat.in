@@ -4,7 +4,6 @@ mkdir include\google\protobuf
 mkdir include\google\protobuf\compiler
 mkdir include\google\protobuf\compiler\cpp
 mkdir include\google\protobuf\compiler\js
-mkdir include\google\protobuf\compiler\php
 mkdir include\google\protobuf\compiler\ruby
 mkdir include\google\protobuf\io
 mkdir include\google\protobuf\stubs
@@ -20,7 +19,6 @@ copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\cpp\cpp_gener
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\importer.h include\google\protobuf\compiler\importer.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\js\js_generator.h include\google\protobuf\compiler\js\js_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\parser.h include\google\protobuf\compiler\parser.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\php\php_generator.h include\google\protobuf\compiler\php\php_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\plugin.h include\google\protobuf\compiler\plugin.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\plugin.pb.h include\google\protobuf\compiler\plugin.pb.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\ruby\ruby_generator.h include\google\protobuf\compiler\ruby\ruby_generator.h

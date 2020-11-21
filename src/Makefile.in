@@ -267,7 +267,6 @@ am_libprotoc_la_OBJECTS = google/protobuf/compiler/code_generator.lo \
 	google/protobuf/compiler/cpp/cpp_service.lo \
 	google/protobuf/compiler/cpp/cpp_string_field.lo \
 	google/protobuf/compiler/js/js_generator.lo \
-	google/protobuf/compiler/php/php_generator.lo \
 	google/protobuf/compiler/ruby/ruby_generator.lo
 libprotoc_la_OBJECTS = $(am_libprotoc_la_OBJECTS)
 libprotoc_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
@@ -739,7 +738,6 @@ am__nobase_include_HEADERS_DIST =  \
 	google/protobuf/compiler/plugin.pb.h \
 	google/protobuf/compiler/cpp/cpp_generator.h \
 	google/protobuf/compiler/js/js_generator.h \
-	google/protobuf/compiler/php/php_generator.h \
 	google/protobuf/compiler/ruby/ruby_generator.h \
 	google/protobuf/util/type_resolver.h \
 	google/protobuf/util/field_comparator.h \
@@ -1221,7 +1219,6 @@ nobase_include_HEADERS = \
   google/protobuf/compiler/plugin.pb.h                          \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
   google/protobuf/compiler/js/js_generator.h                    \
-  google/protobuf/compiler/php/php_generator.h                  \
   google/protobuf/compiler/ruby/ruby_generator.h                \
   google/protobuf/util/type_resolver.h                          \
   google/protobuf/util/field_comparator.h                       \
@@ -1394,7 +1391,6 @@ libprotoc_la_SOURCES = \
   google/protobuf/compiler/cpp/cpp_string_field.cc             \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
   google/protobuf/compiler/js/js_generator.cc                  \
-  google/protobuf/compiler/php/php_generator.cc                \
   google/protobuf/compiler/ruby/ruby_generator.cc
 
 protoc_LDADD = $(PTHREAD_LIBS) libprotobuf.la libprotoc.la
@@ -2127,15 +2123,6 @@ google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp):
 google/protobuf/compiler/js/js_generator.lo:  \
 	google/protobuf/compiler/js/$(am__dirstamp) \
 	google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/php/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/php
-	@: > google/protobuf/compiler/php/$(am__dirstamp)
-google/protobuf/compiler/php/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/php/$(DEPDIR)
-	@: > google/protobuf/compiler/php/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/php/php_generator.lo:  \
-	google/protobuf/compiler/php/$(am__dirstamp) \
-	google/protobuf/compiler/php/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/ruby/$(am__dirstamp):
 	@$(MKDIR_P) google/protobuf/compiler/ruby
 	@: > google/protobuf/compiler/ruby/$(am__dirstamp)
@@ -2970,8 +2957,6 @@ mostlyclean-compile:
 	-rm -f google/protobuf/compiler/cpp/*.lo
 	-rm -f google/protobuf/compiler/js/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/js/*.lo
-	-rm -f google/protobuf/compiler/php/*.$(OBJEXT)
-	-rm -f google/protobuf/compiler/php/*.lo
 	-rm -f google/protobuf/compiler/ruby/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/ruby/*.lo
 	-rm -f google/protobuf/io/*.$(OBJEXT)
@@ -3201,7 +3186,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/cpp/$(DEPDIR)/protobuf_test-cpp_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/cpp/$(DEPDIR)/protobuf_test-metadata_test.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/js/$(DEPDIR)/js_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/php/$(DEPDIR)/php_generator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/ruby/$(DEPDIR)/protobuf_test-ruby_generator_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/ruby/$(DEPDIR)/ruby_generator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/io/$(DEPDIR)/coded_stream.Plo@am__quote@
@@ -6618,7 +6602,6 @@ clean-libtool:
 	-rm -rf google/protobuf/compiler/.libs google/protobuf/compiler/_libs
 	-rm -rf google/protobuf/compiler/cpp/.libs google/protobuf/compiler/cpp/_libs
 	-rm -rf google/protobuf/compiler/js/.libs google/protobuf/compiler/js/_libs
-	-rm -rf google/protobuf/compiler/php/.libs google/protobuf/compiler/php/_libs
 	-rm -rf google/protobuf/compiler/ruby/.libs google/protobuf/compiler/ruby/_libs
 	-rm -rf google/protobuf/io/.libs google/protobuf/io/_libs
 	-rm -rf google/protobuf/stubs/.libs google/protobuf/stubs/_libs
@@ -7011,8 +6994,6 @@ distclean-generic:
 	-rm -f google/protobuf/compiler/cpp/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/php/$(DEPDIR)/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/php/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/ruby/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/ruby/$(am__dirstamp)
 	-rm -f google/protobuf/io/$(DEPDIR)/$(am__dirstamp)
@@ -7039,7 +7020,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 	clean-libLTLIBRARIES clean-libtool clean-local mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -7086,7 +7067,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

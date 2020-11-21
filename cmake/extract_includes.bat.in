@@ -5,7 +5,6 @@ mkdir include\google\protobuf\compiler
 mkdir include\google\protobuf\compiler\cpp
 mkdir include\google\protobuf\compiler\js
 mkdir include\google\protobuf\compiler\php
-mkdir include\google\protobuf\compiler\python
 mkdir include\google\protobuf\compiler\ruby
 mkdir include\google\protobuf\io
 mkdir include\google\protobuf\stubs
@@ -24,7 +23,6 @@ copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\parser.h incl
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\php\php_generator.h include\google\protobuf\compiler\php\php_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\plugin.h include\google\protobuf\compiler\plugin.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\plugin.pb.h include\google\protobuf\compiler\plugin.pb.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\python\python_generator.h include\google\protobuf\compiler\python\python_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\ruby\ruby_generator.h include\google\protobuf\compiler\ruby\ruby_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\descriptor.h include\google\protobuf\descriptor.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\descriptor.pb.h include\google\protobuf\descriptor.pb.h

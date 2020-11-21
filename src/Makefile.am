@@ -157,7 +157,6 @@ nobase_include_HEADERS =                                        \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
   google/protobuf/compiler/js/js_generator.h                    \
   google/protobuf/compiler/php/php_generator.h                  \
-  google/protobuf/compiler/python/python_generator.h            \
   google/protobuf/compiler/ruby/ruby_generator.h                \
   google/protobuf/util/type_resolver.h                          \
   google/protobuf/util/field_comparator.h                       \
@@ -333,7 +332,6 @@ libprotoc_la_SOURCES =                                         \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
   google/protobuf/compiler/js/js_generator.cc                  \
   google/protobuf/compiler/php/php_generator.cc                \
-  google/protobuf/compiler/python/python_generator.cc          \
   google/protobuf/compiler/ruby/ruby_generator.cc
 
 bin_PROGRAMS = protoc
@@ -613,7 +611,6 @@ protobuf_test_SOURCES =                                        \
   google/protobuf/compiler/cpp/cpp_unittest.cc                 \
   google/protobuf/compiler/cpp/cpp_plugin_unittest.cc          \
   google/protobuf/compiler/cpp/metadata_test.cc                \
-  google/protobuf/compiler/python/python_plugin_unittest.cc    \
   google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \
   google/protobuf/util/field_comparator_test.cc                \
   google/protobuf/util/field_mask_util_test.cc                 \

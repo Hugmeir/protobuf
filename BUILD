@@ -241,7 +241,6 @@ cc_library(
         "src/google/protobuf/compiler/php/php_generator.cc",
         "src/google/protobuf/compiler/plugin.cc",
         "src/google/protobuf/compiler/plugin.pb.cc",
-        "src/google/protobuf/compiler/python/python_generator.cc",
         "src/google/protobuf/compiler/ruby/ruby_generator.cc",
         "src/google/protobuf/compiler/subprocess.cc",
         "src/google/protobuf/compiler/zip_writer.cc",
@@ -371,7 +370,6 @@ cc_test(
         "src/google/protobuf/compiler/importer_unittest.cc",
         "src/google/protobuf/compiler/mock_code_generator.cc",
         "src/google/protobuf/compiler/parser_unittest.cc",
-        "src/google/protobuf/compiler/python/python_plugin_unittest.cc",
         "src/google/protobuf/compiler/ruby/ruby_generator_unittest.cc",
         "src/google/protobuf/descriptor_database_unittest.cc",
         "src/google/protobuf/descriptor_unittest.cc",
@@ -443,68 +441,6 @@ cc_test(
 )
 
 
-################################################################################
-# Python support
-################################################################################
-
-py_library(
-    name = "python_srcs",
-    srcs = glob(
-        [
-            "python/google/protobuf/*.py",
-            "python/google/protobuf/**/*.py",
-        ],
-        exclude = [
-            "python/google/protobuf/__init__.py",
-            "python/google/protobuf/**/__init__.py",
-            "python/google/protobuf/internal/*_test.py",
-            "python/google/protobuf/internal/test_util.py",
-        ],
-    ),
-    srcs_version = "PY2AND3",
-    imports = ["python"],
-)
-
-cc_binary(
-    name = "internal/_api_implementation.so",
-    srcs = ["python/google/protobuf/internal/api_implementation.cc"],
-    copts = COPTS + [
-        "-DPYTHON_PROTO2_CPP_IMPL_V2",
-    ],
-    linkshared = 1,
-    linkstatic = 1,
-    deps = select({
-        "//conditions:default": [],
-        ":use_fast_cpp_protos": ["//external:python_headers"],
-    }),
-)
-
-cc_binary(
-    name = "pyext/_message.so",
-    srcs = glob([
-        "python/google/protobuf/pyext/*.cc",
-        "python/google/protobuf/pyext/*.h",
-    ]),
-    copts = COPTS + [
-        "-DGOOGLE_PROTOBUF_HAS_ONEOF=1",
-    ] + select({
-        "//conditions:default": [],
-        ":allow_oversize_protos": ["-DPROTOBUF_PYTHON_ALLOW_OVERSIZE_PROTOS=1"],
-    }),
-    includes = [
-        "python/",
-        "src/",
-    ],
-    linkshared = 1,
-    linkstatic = 1,
-    deps = [
-        ":protobuf",
-    ] + select({
-        "//conditions:default": [],
-        ":use_fast_cpp_protos": ["//external:python_headers"],
-    }),
-)
-
 config_setting(
     name = "use_fast_cpp_protos",
     values = {
@@ -517,124 +453,4 @@ config_setting(
     values = {
         "define": "allow_oversize_protos=true",
     },
-)
-
-# Copy the builtin proto files from src/google/protobuf to
-# python/google/protobuf. This way, the generated Python sources will be in the
-# same directory as the Python runtime sources. This is necessary for the
-# modules to be imported correctly since they are all part of the same Python
-# package.
-internal_copied_filegroup(
-    name = "protos_python",
-    srcs = WELL_KNOWN_PROTOS,
-    strip_prefix = "src",
-    dest = "python",
-)
-
-# TODO(dzc): Remove this once py_proto_library can have labels in srcs, in
-# which case we can simply add :protos_python in srcs.
-COPIED_WELL_KNOWN_PROTOS = ["python/" + s for s in RELATIVE_WELL_KNOWN_PROTOS]
-
-py_proto_library(
-    name = "protobuf_python",
-    srcs = COPIED_WELL_KNOWN_PROTOS,
-    include = "python",
-    data = select({
-        "//conditions:default": [],
-        ":use_fast_cpp_protos": [
-            ":internal/_api_implementation.so",
-            ":pyext/_message.so",
-        ],
-    }),
-    default_runtime = "",
-    protoc = ":protoc",
-    py_libs = [
-        ":python_srcs",
-        "//external:six"
-    ],
-    srcs_version = "PY2AND3",
-    visibility = ["//visibility:public"],
-)
-
-# Copy the test proto files from src/google/protobuf to
-# python/google/protobuf. This way, the generated Python sources will be in the
-# same directory as the Python runtime sources. This is necessary for the
-# modules to be imported correctly by the tests since they are all part of the
-# same Python package.
-internal_copied_filegroup(
-    name = "protos_python_test",
-    srcs = LITE_TEST_PROTOS + TEST_PROTOS,
-    strip_prefix = "src",
-    dest = "python",
-)
-
-# TODO(dzc): Remove this once py_proto_library can have labels in srcs, in
-# which case we can simply add :protos_python_test in srcs.
-COPIED_LITE_TEST_PROTOS = ["python/" + s for s in RELATIVE_LITE_TEST_PROTOS]
-COPIED_TEST_PROTOS = ["python/" + s for s in RELATIVE_TEST_PROTOS]
-
-py_proto_library(
-    name = "python_common_test_protos",
-    srcs = COPIED_LITE_TEST_PROTOS + COPIED_TEST_PROTOS,
-    include = "python",
-    default_runtime = "",
-    protoc = ":protoc",
-    srcs_version = "PY2AND3",
-    deps = [":protobuf_python"],
-)
-
-py_proto_library(
-    name = "python_specific_test_protos",
-    srcs = glob([
-        "python/google/protobuf/internal/*.proto",
-        "python/google/protobuf/internal/import_test_package/*.proto",
-    ]),
-    include = "python",
-    default_runtime = ":protobuf_python",
-    protoc = ":protoc",
-    srcs_version = "PY2AND3",
-    deps = [":python_common_test_protos"],
-)
-
-py_library(
-    name = "python_tests",
-    srcs = glob(
-        [
-            "python/google/protobuf/internal/*_test.py",
-            "python/google/protobuf/internal/test_util.py",
-            "python/google/protobuf/internal/import_test_package/__init__.py",
-        ],
-    ),
-    imports = ["python"],
-    srcs_version = "PY2AND3",
-    deps = [
-        ":protobuf_python",
-        ":python_common_test_protos",
-        ":python_specific_test_protos",
-    ],
-)
-
-internal_protobuf_py_tests(
-    name = "python_tests_batch",
-    data = glob([
-        "src/google/protobuf/**/*",
-    ]),
-    modules = [
-        "descriptor_database_test",
-        "descriptor_pool_test",
-        "descriptor_test",
-        "generator_test",
-        "json_format_test",
-        "message_factory_test",
-        "message_test",
-        "proto_builder_test",
-        "reflection_test",
-        "service_reflection_test",
-        "symbol_database_test",
-        "text_encoding_test",
-        "text_format_test",
-        "unknown_fields_test",
-        "wire_format_test",
-    ],
-    deps = [":python_tests"],
 )

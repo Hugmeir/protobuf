@@ -52,7 +52,7 @@ echo '
 ' > $TEST_TMPDIR/testzip.proto
 
 $PROTOC \
-    --cpp_out=$TEST_TMPDIR/testzip.zip --python_out=$TEST_TMPDIR/testzip.zip \
+    --cpp_out=$TEST_TMPDIR/testzip.zip \
     -I$TEST_TMPDIR testzip.proto \
     || fail 'protoc failed.'
 

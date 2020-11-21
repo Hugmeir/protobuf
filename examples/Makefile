@@ -1,16 +1,15 @@
 # See README.txt.
 
-.PHONY: all cpp python clean
+.PHONY: all cpp clean
 
-all: cpp python
+all: cpp
 
 cpp:    add_person_cpp    list_people_cpp
 go:     add_person_go     list_people_go
 gotest: add_person_gotest list_people_gotest
-python: add_person_python list_people_python
 
 clean:
-	rm -f add_person_cpp list_people_cpp add_person_python list_people_python
+	rm -f add_person_cpp list_people_cpp
 	rm -f protoc_middleman addressbook.pb.cc addressbook.pb.h addressbook_pb2.py
 	rm -f *.pyc
 	rm -f protoc_middleman_go tutorial/*.pb.go add_person_go list_people_go
@@ -20,7 +19,7 @@ clean:
 	rmdir com 2>/dev/null || true
 
 protoc_middleman: addressbook.proto
-	protoc --cpp_out=. --python_out=. addressbook.proto
+	protoc --cpp_out=. addressbook.proto
 	@touch protoc_middleman
 
 protoc_middleman_go: addressbook.proto
@@ -48,14 +47,3 @@ list_people_go: list_people.go protoc_middleman_go
 list_people_gotest: list_people.go list_people_go
 	go test list_people.go list_people_test.go
 
-add_person_python: add_person.py protoc_middleman
-	@echo "Writing shortcut script add_person_python..."
-	@echo '#! /bin/sh' > add_person_python
-	@echo './add_person.py "$$@"' >> add_person_python
-	@chmod +x add_person_python
-
-list_people_python: list_people.py protoc_middleman
-	@echo "Writing shortcut script list_people_python..."
-	@echo '#! /bin/sh' > list_people_python
-	@echo './list_people.py "$$@"' >> list_people_python
-	@chmod +x list_people_python

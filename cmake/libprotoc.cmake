@@ -31,18 +31,6 @@ set(libprotoc_files
   ${protobuf_source_dir}/src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/js/js_generator.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_enum.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_extension.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_field.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_file.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_generator.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_helpers.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_map_field.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_message.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_message_field.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_oneof.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/php/php_generator.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/plugin.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/plugin.pb.cc

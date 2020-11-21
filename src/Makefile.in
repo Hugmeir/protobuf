@@ -168,7 +168,7 @@ libprotobuf_lite_la_OBJECTS = $(am_libprotobuf_lite_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
-am__v_lt_1 = 
+am__v_lt_1 =
 libprotobuf_lite_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(AM_CXXFLAGS) $(CXXFLAGS) $(libprotobuf_lite_la_LDFLAGS) \
@@ -267,18 +267,6 @@ am_libprotoc_la_OBJECTS = google/protobuf/compiler/code_generator.lo \
 	google/protobuf/compiler/cpp/cpp_service.lo \
 	google/protobuf/compiler/cpp/cpp_string_field.lo \
 	google/protobuf/compiler/js/js_generator.lo \
-	google/protobuf/compiler/objectivec/objectivec_enum.lo \
-	google/protobuf/compiler/objectivec/objectivec_enum_field.lo \
-	google/protobuf/compiler/objectivec/objectivec_extension.lo \
-	google/protobuf/compiler/objectivec/objectivec_field.lo \
-	google/protobuf/compiler/objectivec/objectivec_file.lo \
-	google/protobuf/compiler/objectivec/objectivec_generator.lo \
-	google/protobuf/compiler/objectivec/objectivec_helpers.lo \
-	google/protobuf/compiler/objectivec/objectivec_map_field.lo \
-	google/protobuf/compiler/objectivec/objectivec_message.lo \
-	google/protobuf/compiler/objectivec/objectivec_message_field.lo \
-	google/protobuf/compiler/objectivec/objectivec_oneof.lo \
-	google/protobuf/compiler/objectivec/objectivec_primitive_field.lo \
 	google/protobuf/compiler/php/php_generator.lo \
 	google/protobuf/compiler/python/python_generator.lo \
 	google/protobuf/compiler/ruby/ruby_generator.lo \
@@ -523,7 +511,6 @@ am_protobuf_test_OBJECTS = google/protobuf/stubs/protobuf_test-bytestream_unitte
 	google/protobuf/compiler/cpp/protobuf_test-cpp_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT) \
-	google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.$(OBJEXT) \
 	google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.$(OBJEXT) \
 	google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.$(OBJEXT) \
 	google/protobuf/compiler/csharp/protobuf_test-csharp_generator_unittest.$(OBJEXT) \
@@ -627,11 +614,11 @@ am__v_P_1 = :
 AM_V_GEN = $(am__v_GEN_@AM_V@)
 am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
 am__v_GEN_0 = @echo "  GEN     " $@;
-am__v_GEN_1 = 
+am__v_GEN_1 =
 AM_V_at = $(am__v_at_@AM_V@)
 am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
 am__v_at_0 = @
-am__v_at_1 = 
+am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -645,7 +632,7 @@ LTCXXCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 AM_V_CXX = $(am__v_CXX_@AM_V@)
 am__v_CXX_ = $(am__v_CXX_@AM_DEFAULT_V@)
 am__v_CXX_0 = @echo "  CXX     " $@;
-am__v_CXX_1 = 
+am__v_CXX_1 =
 CXXLD = $(CXX)
 CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
@@ -653,7 +640,7 @@ CXXLINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
-am__v_CXXLD_1 = 
+am__v_CXXLD_1 =
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
@@ -663,7 +650,7 @@ LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CC = $(am__v_CC_@AM_V@)
 am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
 am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
+am__v_CC_1 =
 CCLD = $(CC)
 LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -671,7 +658,7 @@ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
+am__v_CCLD_1 =
 SOURCES = $(libprotobuf_lite_la_SOURCES) $(libprotobuf_la_SOURCES) \
 	$(nodist_libprotobuf_la_SOURCES) $(libprotoc_la_SOURCES) \
 	$(nodist_no_warning_test_SOURCES) \
@@ -773,8 +760,6 @@ am__nobase_include_HEADERS_DIST =  \
 	google/protobuf/compiler/csharp/csharp_generator.h \
 	google/protobuf/compiler/csharp/csharp_names.h \
 	google/protobuf/compiler/js/js_generator.h \
-	google/protobuf/compiler/objectivec/objectivec_generator.h \
-	google/protobuf/compiler/objectivec/objectivec_helpers.h \
 	google/protobuf/compiler/php/php_generator.h \
 	google/protobuf/compiler/python/python_generator.h \
 	google/protobuf/compiler/ruby/ruby_generator.h \
@@ -1035,9 +1020,6 @@ MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
 NM = @NM@
 NMEDIT = @NMEDIT@
-OBJC = @OBJC@
-OBJCDEPMODE = @OBJCDEPMODE@
-OBJCFLAGS = @OBJCFLAGS@
 OBJDUMP = @OBJDUMP@
 OBJEXT = @OBJEXT@
 OTOOL = @OTOOL@
@@ -1070,7 +1052,6 @@ ac_ct_AR = @ac_ct_AR@
 ac_ct_CC = @ac_ct_CC@
 ac_ct_CXX = @ac_ct_CXX@
 ac_ct_DUMPBIN = @ac_ct_DUMPBIN@
-ac_ct_OBJC = @ac_ct_OBJC@
 acx_pthread_config = @acx_pthread_config@
 am__include = @am__include@
 am__leading_dot = @am__leading_dot@
@@ -1122,15 +1103,15 @@ target_vendor = @target_vendor@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-@HAVE_ZLIB_FALSE@GZCHECKPROGRAMS = 
+@HAVE_ZLIB_FALSE@GZCHECKPROGRAMS =
 @HAVE_ZLIB_TRUE@GZCHECKPROGRAMS = zcgzip zcgunzip
-@HAVE_ZLIB_FALSE@GZHEADERS = 
+@HAVE_ZLIB_FALSE@GZHEADERS =
 @HAVE_ZLIB_TRUE@GZHEADERS = google/protobuf/io/gzip_stream.h
-@HAVE_ZLIB_FALSE@GZTESTS = 
+@HAVE_ZLIB_FALSE@GZTESTS =
 @HAVE_ZLIB_TRUE@GZTESTS = google/protobuf/io/gzip_stream_unittest.sh
-@HAVE_ZLIB_FALSE@ZLIB_DEF = 
+@HAVE_ZLIB_FALSE@ZLIB_DEF =
 @HAVE_ZLIB_TRUE@ZLIB_DEF = -DHAVE_ZLIB=1
-@HAVE_PTHREAD_FALSE@PTHREAD_DEF = 
+@HAVE_PTHREAD_FALSE@PTHREAD_DEF =
 @HAVE_PTHREAD_TRUE@PTHREAD_DEF = -DHAVE_PTHREAD=1
 @GCC_FALSE@NO_OPT_CXXFLAGS = $(PTHREAD_CFLAGS) $(PTHREAD_DEF) $(ZLIB_DEF)
 
@@ -1264,8 +1245,6 @@ nobase_include_HEADERS = \
   google/protobuf/compiler/csharp/csharp_generator.h            \
   google/protobuf/compiler/csharp/csharp_names.h                \
   google/protobuf/compiler/js/js_generator.h                    \
-  google/protobuf/compiler/objectivec/objectivec_generator.h    \
-  google/protobuf/compiler/objectivec/objectivec_helpers.h      \
   google/protobuf/compiler/php/php_generator.h                  \
   google/protobuf/compiler/python/python_generator.h            \
   google/protobuf/compiler/ruby/ruby_generator.h                \
@@ -1440,29 +1419,6 @@ libprotoc_la_SOURCES = \
   google/protobuf/compiler/cpp/cpp_string_field.cc             \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
   google/protobuf/compiler/js/js_generator.cc                  \
-  google/protobuf/compiler/objectivec/objectivec_enum.cc       \
-  google/protobuf/compiler/objectivec/objectivec_enum.h        \
-  google/protobuf/compiler/objectivec/objectivec_enum_field.cc \
-  google/protobuf/compiler/objectivec/objectivec_enum_field.h  \
-  google/protobuf/compiler/objectivec/objectivec_extension.cc  \
-  google/protobuf/compiler/objectivec/objectivec_extension.h   \
-  google/protobuf/compiler/objectivec/objectivec_field.cc      \
-  google/protobuf/compiler/objectivec/objectivec_field.h       \
-  google/protobuf/compiler/objectivec/objectivec_file.cc       \
-  google/protobuf/compiler/objectivec/objectivec_file.h        \
-  google/protobuf/compiler/objectivec/objectivec_generator.cc  \
-  google/protobuf/compiler/objectivec/objectivec_helpers.cc    \
-  google/protobuf/compiler/objectivec/objectivec_helpers.h     \
-  google/protobuf/compiler/objectivec/objectivec_map_field.cc  \
-  google/protobuf/compiler/objectivec/objectivec_map_field.h   \
-  google/protobuf/compiler/objectivec/objectivec_message.cc    \
-  google/protobuf/compiler/objectivec/objectivec_message.h     \
-  google/protobuf/compiler/objectivec/objectivec_message_field.cc \
-  google/protobuf/compiler/objectivec/objectivec_message_field.h \
-  google/protobuf/compiler/objectivec/objectivec_oneof.cc      \
-  google/protobuf/compiler/objectivec/objectivec_oneof.h       \
-  google/protobuf/compiler/objectivec/objectivec_primitive_field.cc \
-  google/protobuf/compiler/objectivec/objectivec_primitive_field.h \
   google/protobuf/compiler/php/php_generator.cc                \
   google/protobuf/compiler/python/python_generator.cc          \
   google/protobuf/compiler/ruby/ruby_generator.cc              \
@@ -1753,7 +1709,6 @@ protobuf_test_SOURCES = \
   google/protobuf/compiler/cpp/cpp_unittest.cc                 \
   google/protobuf/compiler/cpp/cpp_plugin_unittest.cc          \
   google/protobuf/compiler/cpp/metadata_test.cc                \
-  google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc \
   google/protobuf/compiler/python/python_plugin_unittest.cc    \
   google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \
   google/protobuf/compiler/csharp/csharp_generator_unittest.cc \
@@ -2003,7 +1958,7 @@ google/protobuf/io/zero_copy_stream_impl_lite.lo:  \
 	google/protobuf/io/$(am__dirstamp) \
 	google/protobuf/io/$(DEPDIR)/$(am__dirstamp)
 
-libprotobuf-lite.la: $(libprotobuf_lite_la_OBJECTS) $(libprotobuf_lite_la_DEPENDENCIES) $(EXTRA_libprotobuf_lite_la_DEPENDENCIES) 
+libprotobuf-lite.la: $(libprotobuf_lite_la_OBJECTS) $(libprotobuf_lite_la_DEPENDENCIES) $(EXTRA_libprotobuf_lite_la_DEPENDENCIES)
 	$(AM_V_CXXLD)$(libprotobuf_lite_la_LINK) -rpath $(libdir) $(libprotobuf_lite_la_OBJECTS) $(libprotobuf_lite_la_LIBADD) $(LIBS)
 google/protobuf/any.pb.lo: google/protobuf/$(am__dirstamp) \
 	google/protobuf/$(DEPDIR)/$(am__dirstamp)
@@ -2158,7 +2113,7 @@ google/protobuf/util/type_resolver_util.lo:  \
 	google/protobuf/util/$(am__dirstamp) \
 	google/protobuf/util/$(DEPDIR)/$(am__dirstamp)
 
-libprotobuf.la: $(libprotobuf_la_OBJECTS) $(libprotobuf_la_DEPENDENCIES) $(EXTRA_libprotobuf_la_DEPENDENCIES) 
+libprotobuf.la: $(libprotobuf_la_OBJECTS) $(libprotobuf_la_DEPENDENCIES) $(EXTRA_libprotobuf_la_DEPENDENCIES)
 	$(AM_V_CXXLD)$(libprotobuf_la_LINK) -rpath $(libdir) $(libprotobuf_la_OBJECTS) $(libprotobuf_la_LIBADD) $(LIBS)
 google/protobuf/compiler/code_generator.lo:  \
 	google/protobuf/compiler/$(am__dirstamp) \
@@ -2232,48 +2187,6 @@ google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp):
 google/protobuf/compiler/js/js_generator.lo:  \
 	google/protobuf/compiler/js/$(am__dirstamp) \
 	google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/objectivec
-	@: > google/protobuf/compiler/objectivec/$(am__dirstamp)
-google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/objectivec/$(DEPDIR)
-	@: > google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_enum.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_enum_field.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_extension.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_field.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_file.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_generator.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_helpers.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_map_field.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_message.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_message_field.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_oneof.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/objectivec_primitive_field.lo:  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/php/$(am__dirstamp):
 	@$(MKDIR_P) google/protobuf/compiler/php
 	@: > google/protobuf/compiler/php/$(am__dirstamp)
@@ -2356,7 +2269,7 @@ google/protobuf/compiler/csharp/csharp_wrapper_field.lo:  \
 	google/protobuf/compiler/csharp/$(am__dirstamp) \
 	google/protobuf/compiler/csharp/$(DEPDIR)/$(am__dirstamp)
 
-libprotoc.la: $(libprotoc_la_OBJECTS) $(libprotoc_la_DEPENDENCIES) $(EXTRA_libprotoc_la_DEPENDENCIES) 
+libprotoc.la: $(libprotoc_la_OBJECTS) $(libprotoc_la_DEPENDENCIES) $(EXTRA_libprotoc_la_DEPENDENCIES)
 	$(AM_V_CXXLD)$(libprotoc_la_LINK) -rpath $(libdir) $(libprotoc_la_OBJECTS) $(libprotoc_la_LIBADD) $(LIBS)
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
@@ -2561,7 +2474,7 @@ google/protobuf/util/no_warning_test-message_differencer_unittest.pb.$(OBJEXT): 
 	google/protobuf/util/$(am__dirstamp) \
 	google/protobuf/util/$(DEPDIR)/$(am__dirstamp)
 
-no-warning-test$(EXEEXT): $(no_warning_test_OBJECTS) $(no_warning_test_DEPENDENCIES) $(EXTRA_no_warning_test_DEPENDENCIES) 
+no-warning-test$(EXEEXT): $(no_warning_test_OBJECTS) $(no_warning_test_DEPENDENCIES) $(EXTRA_no_warning_test_DEPENDENCIES)
 	@rm -f no-warning-test$(EXEEXT)
 	$(AM_V_CXXLD)$(no_warning_test_LINK) $(no_warning_test_OBJECTS) $(no_warning_test_LDADD) $(LIBS)
 google/protobuf/compiler/cpp/protobuf_lazy_descriptor_test-cpp_unittest.$(OBJEXT):  \
@@ -2727,7 +2640,7 @@ google/protobuf/util/protobuf_lazy_descriptor_test-message_differencer_unittest.
 	google/protobuf/util/$(am__dirstamp) \
 	google/protobuf/util/$(DEPDIR)/$(am__dirstamp)
 
-protobuf-lazy-descriptor-test$(EXEEXT): $(protobuf_lazy_descriptor_test_OBJECTS) $(protobuf_lazy_descriptor_test_DEPENDENCIES) $(EXTRA_protobuf_lazy_descriptor_test_DEPENDENCIES) 
+protobuf-lazy-descriptor-test$(EXEEXT): $(protobuf_lazy_descriptor_test_OBJECTS) $(protobuf_lazy_descriptor_test_DEPENDENCIES) $(EXTRA_protobuf_lazy_descriptor_test_DEPENDENCIES)
 	@rm -f protobuf-lazy-descriptor-test$(EXEEXT)
 	$(AM_V_CXXLD)$(protobuf_lazy_descriptor_test_LINK) $(protobuf_lazy_descriptor_test_OBJECTS) $(protobuf_lazy_descriptor_test_LDADD) $(LIBS)
 google/protobuf/protobuf_lite_arena_test-lite_arena_unittest.$(OBJEXT):  \
@@ -2758,7 +2671,7 @@ google/protobuf/protobuf_lite_arena_test-unittest_import_public_lite.pb.$(OBJEXT
 	google/protobuf/$(am__dirstamp) \
 	google/protobuf/$(DEPDIR)/$(am__dirstamp)
 
-protobuf-lite-arena-test$(EXEEXT): $(protobuf_lite_arena_test_OBJECTS) $(protobuf_lite_arena_test_DEPENDENCIES) $(EXTRA_protobuf_lite_arena_test_DEPENDENCIES) 
+protobuf-lite-arena-test$(EXEEXT): $(protobuf_lite_arena_test_OBJECTS) $(protobuf_lite_arena_test_DEPENDENCIES) $(EXTRA_protobuf_lite_arena_test_DEPENDENCIES)
 	@rm -f protobuf-lite-arena-test$(EXEEXT)
 	$(AM_V_CXXLD)$(protobuf_lite_arena_test_LINK) $(protobuf_lite_arena_test_OBJECTS) $(protobuf_lite_arena_test_LDADD) $(LIBS)
 google/protobuf/protobuf_lite_test-lite_unittest.$(OBJEXT):  \
@@ -2789,7 +2702,7 @@ google/protobuf/protobuf_lite_test-unittest_import_public_lite.pb.$(OBJEXT):  \
 	google/protobuf/$(am__dirstamp) \
 	google/protobuf/$(DEPDIR)/$(am__dirstamp)
 
-protobuf-lite-test$(EXEEXT): $(protobuf_lite_test_OBJECTS) $(protobuf_lite_test_DEPENDENCIES) $(EXTRA_protobuf_lite_test_DEPENDENCIES) 
+protobuf-lite-test$(EXEEXT): $(protobuf_lite_test_OBJECTS) $(protobuf_lite_test_DEPENDENCIES) $(EXTRA_protobuf_lite_test_DEPENDENCIES)
 	@rm -f protobuf-lite-test$(EXEEXT)
 	$(AM_V_CXXLD)$(protobuf_lite_test_LINK) $(protobuf_lite_test_OBJECTS) $(protobuf_lite_test_LDADD) $(LIBS)
 google/protobuf/stubs/protobuf_test-bytestream_unittest.$(OBJEXT):  \
@@ -2939,9 +2852,6 @@ google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT):  \
 google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT):  \
 	google/protobuf/compiler/cpp/$(am__dirstamp) \
 	google/protobuf/compiler/cpp/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.$(OBJEXT):  \
-	google/protobuf/compiler/objectivec/$(am__dirstamp) \
-	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.$(OBJEXT):  \
 	google/protobuf/compiler/python/$(am__dirstamp) \
 	google/protobuf/compiler/python/$(DEPDIR)/$(am__dirstamp)
@@ -3141,14 +3051,14 @@ google/protobuf/util/protobuf_test-message_differencer_unittest.pb.$(OBJEXT):  \
 	google/protobuf/util/$(am__dirstamp) \
 	google/protobuf/util/$(DEPDIR)/$(am__dirstamp)
 
-protobuf-test$(EXEEXT): $(protobuf_test_OBJECTS) $(protobuf_test_DEPENDENCIES) $(EXTRA_protobuf_test_DEPENDENCIES) 
+protobuf-test$(EXEEXT): $(protobuf_test_OBJECTS) $(protobuf_test_DEPENDENCIES) $(EXTRA_protobuf_test_DEPENDENCIES)
 	@rm -f protobuf-test$(EXEEXT)
 	$(AM_V_CXXLD)$(protobuf_test_LINK) $(protobuf_test_OBJECTS) $(protobuf_test_LDADD) $(LIBS)
 google/protobuf/compiler/main.$(OBJEXT):  \
 	google/protobuf/compiler/$(am__dirstamp) \
 	google/protobuf/compiler/$(DEPDIR)/$(am__dirstamp)
 
-protoc$(EXEEXT): $(protoc_OBJECTS) $(protoc_DEPENDENCIES) $(EXTRA_protoc_DEPENDENCIES) 
+protoc$(EXEEXT): $(protoc_OBJECTS) $(protoc_DEPENDENCIES) $(EXTRA_protoc_DEPENDENCIES)
 	@rm -f protoc$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(protoc_OBJECTS) $(protoc_LDADD) $(LIBS)
 google/protobuf/compiler/test_plugin-mock_code_generator.$(OBJEXT):  \
@@ -3161,21 +3071,21 @@ google/protobuf/compiler/test_plugin-test_plugin.$(OBJEXT):  \
 	google/protobuf/compiler/$(am__dirstamp) \
 	google/protobuf/compiler/$(DEPDIR)/$(am__dirstamp)
 
-test_plugin$(EXEEXT): $(test_plugin_OBJECTS) $(test_plugin_DEPENDENCIES) $(EXTRA_test_plugin_DEPENDENCIES) 
+test_plugin$(EXEEXT): $(test_plugin_OBJECTS) $(test_plugin_DEPENDENCIES) $(EXTRA_test_plugin_DEPENDENCIES)
 	@rm -f test_plugin$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(test_plugin_OBJECTS) $(test_plugin_LDADD) $(LIBS)
 google/protobuf/testing/zcgunzip.$(OBJEXT):  \
 	google/protobuf/testing/$(am__dirstamp) \
 	google/protobuf/testing/$(DEPDIR)/$(am__dirstamp)
 
-zcgunzip$(EXEEXT): $(zcgunzip_OBJECTS) $(zcgunzip_DEPENDENCIES) $(EXTRA_zcgunzip_DEPENDENCIES) 
+zcgunzip$(EXEEXT): $(zcgunzip_OBJECTS) $(zcgunzip_DEPENDENCIES) $(EXTRA_zcgunzip_DEPENDENCIES)
 	@rm -f zcgunzip$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(zcgunzip_OBJECTS) $(zcgunzip_LDADD) $(LIBS)
 google/protobuf/testing/zcgzip.$(OBJEXT):  \
 	google/protobuf/testing/$(am__dirstamp) \
 	google/protobuf/testing/$(DEPDIR)/$(am__dirstamp)
 
-zcgzip$(EXEEXT): $(zcgzip_OBJECTS) $(zcgzip_DEPENDENCIES) $(EXTRA_zcgzip_DEPENDENCIES) 
+zcgzip$(EXEEXT): $(zcgzip_OBJECTS) $(zcgzip_DEPENDENCIES) $(EXTRA_zcgzip_DEPENDENCIES)
 	@rm -f zcgzip$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(zcgzip_OBJECTS) $(zcgzip_LDADD) $(LIBS)
 
@@ -3191,8 +3101,6 @@ mostlyclean-compile:
 	-rm -f google/protobuf/compiler/csharp/*.lo
 	-rm -f google/protobuf/compiler/js/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/js/*.lo
-	-rm -f google/protobuf/compiler/objectivec/*.$(OBJEXT)
-	-rm -f google/protobuf/compiler/objectivec/*.lo
 	-rm -f google/protobuf/compiler/php/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/php/*.lo
 	-rm -f google/protobuf/compiler/python/*.$(OBJEXT)
@@ -3443,19 +3351,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/csharp/$(DEPDIR)/csharp_wrapper_field.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/csharp/$(DEPDIR)/protobuf_test-csharp_generator_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/js/$(DEPDIR)/js_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_enum.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_enum_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_extension.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_file.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_map_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_message.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_message_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_oneof.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_primitive_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/php/$(DEPDIR)/php_generator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/python/$(DEPDIR)/protobuf_test-python_plugin_unittest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/python/$(DEPDIR)/python_generator.Plo@am__quote@
@@ -5928,20 +5823,6 @@ google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj: google/protobuf/co
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj `if test -f 'google/protobuf/compiler/cpp/metadata_test.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/cpp/metadata_test.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/cpp/metadata_test.cc'; fi`
 
-google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o: google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o -MD -MP -MF google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo -c -o google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o `test -f 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc' object='google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o `test -f 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
-
-google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.obj: google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.obj -MD -MP -MF google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo -c -o google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.obj `if test -f 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc' object='google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.obj `if test -f 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc'; fi`
-
 google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.o: google/protobuf/compiler/python/python_plugin_unittest.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.o -MD -MP -MF google/protobuf/compiler/python/$(DEPDIR)/protobuf_test-python_plugin_unittest.Tpo -c -o google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.o `test -f 'google/protobuf/compiler/python/python_plugin_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/python/python_plugin_unittest.cc
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/python/$(DEPDIR)/protobuf_test-python_plugin_unittest.Tpo google/protobuf/compiler/python/$(DEPDIR)/protobuf_test-python_plugin_unittest.Po
@@ -6918,7 +6799,6 @@ clean-libtool:
 	-rm -rf google/protobuf/compiler/cpp/.libs google/protobuf/compiler/cpp/_libs
 	-rm -rf google/protobuf/compiler/csharp/.libs google/protobuf/compiler/csharp/_libs
 	-rm -rf google/protobuf/compiler/js/.libs google/protobuf/compiler/js/_libs
-	-rm -rf google/protobuf/compiler/objectivec/.libs google/protobuf/compiler/objectivec/_libs
 	-rm -rf google/protobuf/compiler/php/.libs google/protobuf/compiler/php/_libs
 	-rm -rf google/protobuf/compiler/python/.libs google/protobuf/compiler/python/_libs
 	-rm -rf google/protobuf/compiler/ruby/.libs google/protobuf/compiler/ruby/_libs
@@ -7315,8 +7195,6 @@ distclean-generic:
 	-rm -f google/protobuf/compiler/csharp/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/objectivec/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/php/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/php/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/python/$(DEPDIR)/$(am__dirstamp)
@@ -7347,7 +7225,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 	clean-libLTLIBRARIES clean-libtool clean-local mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -7394,7 +7272,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

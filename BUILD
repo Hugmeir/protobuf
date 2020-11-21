@@ -180,14 +180,6 @@ cc_library(
     deps = [":protobuf_lite"],
 )
 
-objc_library(
-    name = "protobuf_objc",
-    hdrs = ["objectivec/GPBProtocolBuffers.h"],
-    includes = ["objectivec"],
-    non_arc_srcs = ["objectivec/GPBProtocolBuffers.m"],
-    visibility = ["//visibility:public"],
-)
-
 RELATIVE_WELL_KNOWN_PROTOS = [
     # AUTOGEN(well_known_protos)
     "google/protobuf/any.proto",
@@ -262,18 +254,6 @@ cc_library(
         "src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc",
         "src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc",
         "src/google/protobuf/compiler/js/js_generator.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_enum.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_extension.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_field.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_file.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_generator.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_helpers.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_map_field.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_message.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_message_field.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_oneof.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc",
         "src/google/protobuf/compiler/php/php_generator.cc",
         "src/google/protobuf/compiler/plugin.cc",
         "src/google/protobuf/compiler/plugin.pb.cc",
@@ -407,7 +387,6 @@ cc_test(
         "src/google/protobuf/compiler/csharp/csharp_generator_unittest.cc",
         "src/google/protobuf/compiler/importer_unittest.cc",
         "src/google/protobuf/compiler/mock_code_generator.cc",
-        "src/google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc",
         "src/google/protobuf/compiler/parser_unittest.cc",
         "src/google/protobuf/compiler/python/python_plugin_unittest.cc",
         "src/google/protobuf/compiler/ruby/ruby_generator_unittest.cc",

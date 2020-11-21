@@ -18,8 +18,6 @@ protoc_outputs =                                               \
 
 other_language_protoc_outputs =                                \
   conformance_pb2.py                                           \
-  Conformance.pbobjc.h                                         \
-  Conformance.pbobjc.m                                         \
   conformance_pb.rb                                            \
   google/protobuf/any.pb.cc                                    \
   google/protobuf/any.pb.h                                     \
@@ -58,7 +56,6 @@ EXTRA_DIST =                  \
   conformance_ruby.rb         \
   failure_list_cpp.txt        \
   failure_list_csharp.txt     \
-  failure_list_objc.txt       \
   failure_list_python.txt     \
   failure_list_python_cpp.txt \
   failure_list_python-post26.txt \
@@ -85,29 +82,11 @@ conformance_cpp_CPPFLAGS = -I$(top_srcdir)/src
 # so a direct "make test_cpp" could fail if parallel enough.
 conformance_cpp-conformance_cpp.$(OBJEXT): conformance.pb.h
 
-if OBJC_CONFORMANCE_TEST
-
-bin_PROGRAMS += conformance-objc
-
-conformance_objc_SOURCES = conformance_objc.m ../objectivec/GPBProtocolBuffers.m
-nodist_conformance_objc_SOURCES = Conformance.pbobjc.m
-# On travis, the build fails without the isysroot because whatever system
-# headers are being found don't include generics support for
-# NSArray/NSDictionary, the only guess is their image at one time had an odd
-# setup for Xcode and old frameworks are being found.
-conformance_objc_CPPFLAGS = -I$(top_srcdir)/objectivec -isysroot `xcrun --sdk macosx --show-sdk-path`
-conformance_objc_LDFLAGS = -framework Foundation
-# Explicit dep beacuse BUILT_SOURCES are only done before a "make all/check"
-# so a direct "make test_objc" could fail if parallel enough.
-conformance_objc-conformance_objc.$(OBJEXT): Conformance.pbobjc.h
-
-endif
-
 if USE_EXTERNAL_PROTOC
 
 # Some implementations include pre-generated versions of well-known types.
 protoc_middleman: $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
-	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --ruby_out=. --objc_out=. --python_out=. $(conformance_protoc_inputs)
+	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --ruby_out=. --python_out=. $(conformance_protoc_inputs)
 	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --ruby_out=. --python_out=. $(well_known_type_protoc_inputs)
 	## $(PROTOC) -I$(srcdir) -I$(top_srcdir) $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
 	touch protoc_middleman
@@ -118,7 +97,7 @@ else
 # relative to srcdir, which may not be the same as the current directory when
 # building out-of-tree.
 protoc_middleman: $(top_srcdir)/src/protoc$(EXEEXT) $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
-	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --ruby_out=$$oldpwd --objc_out=$$oldpwd --python_out=$$oldpwd $(conformance_protoc_inputs) )
+	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --ruby_out=$$oldpwd --python_out=$$oldpwd $(conformance_protoc_inputs) )
 	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --ruby_out=$$oldpwd --python_out=$$oldpwd $(well_known_type_protoc_inputs) )
 	## @mkdir -p lite
 	## oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src $(conformance_protoc_inputs) $(well_known_type_protoc_inputs) )
@@ -164,9 +143,3 @@ test_python: protoc_middleman conformance-test-runner
 test_python_cpp: protoc_middleman conformance-test-runner
 	./conformance-test-runner --enforce_recommended --failure_list failure_list_python_cpp.txt ./conformance_python.py
 
-if OBJC_CONFORMANCE_TEST
-
-test_objc: protoc_middleman conformance-test-runner conformance-objc
-	./conformance-test-runner --enforce_recommended --failure_list failure_list_objc.txt ./conformance-objc
-
-endif

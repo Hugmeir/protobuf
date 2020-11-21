@@ -2570,7 +2570,7 @@ ac_config_headers="$ac_config_headers config.h"
 
 case "$DIST_LANG" in
   "") DIST_LANG=all ;;
-  all | cpp | csharp | python | objectivec | ruby | js | php) ;;
+  all | cpp | csharp | python | ruby | js | php) ;;
   *) { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
 as_fn_error $? "unknown language: $DIST_LANG

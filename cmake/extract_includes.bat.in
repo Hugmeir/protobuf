@@ -5,7 +5,6 @@ mkdir include\google\protobuf\compiler
 mkdir include\google\protobuf\compiler\cpp
 mkdir include\google\protobuf\compiler\csharp
 mkdir include\google\protobuf\compiler\js
-mkdir include\google\protobuf\compiler\objectivec
 mkdir include\google\protobuf\compiler\php
 mkdir include\google\protobuf\compiler\python
 mkdir include\google\protobuf\compiler\ruby
@@ -24,8 +23,6 @@ copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\csharp\csharp
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\csharp\csharp_names.h include\google\protobuf\compiler\csharp\csharp_names.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\importer.h include\google\protobuf\compiler\importer.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\js\js_generator.h include\google\protobuf\compiler\js\js_generator.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\objectivec\objectivec_generator.h include\google\protobuf\compiler\objectivec\objectivec_generator.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\objectivec\objectivec_helpers.h include\google\protobuf\compiler\objectivec\objectivec_helpers.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\parser.h include\google\protobuf\compiler\parser.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\php\php_generator.h include\google\protobuf\compiler\php\php_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\plugin.h include\google\protobuf\compiler\plugin.h

@@ -155,8 +155,6 @@ nobase_include_HEADERS =                                        \
   google/protobuf/compiler/plugin.h                             \
   google/protobuf/compiler/plugin.pb.h                          \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
-  google/protobuf/compiler/csharp/csharp_generator.h            \
-  google/protobuf/compiler/csharp/csharp_names.h                \
   google/protobuf/compiler/js/js_generator.h                    \
   google/protobuf/compiler/php/php_generator.h                  \
   google/protobuf/compiler/python/python_generator.h            \
@@ -336,39 +334,7 @@ libprotoc_la_SOURCES =                                         \
   google/protobuf/compiler/js/js_generator.cc                  \
   google/protobuf/compiler/php/php_generator.cc                \
   google/protobuf/compiler/python/python_generator.cc          \
-  google/protobuf/compiler/ruby/ruby_generator.cc              \
-  google/protobuf/compiler/csharp/csharp_doc_comment.cc        \
-  google/protobuf/compiler/csharp/csharp_doc_comment.h         \
-  google/protobuf/compiler/csharp/csharp_enum.cc               \
-  google/protobuf/compiler/csharp/csharp_enum.h                \
-  google/protobuf/compiler/csharp/csharp_enum_field.cc         \
-  google/protobuf/compiler/csharp/csharp_enum_field.h          \
-  google/protobuf/compiler/csharp/csharp_field_base.cc         \
-  google/protobuf/compiler/csharp/csharp_field_base.h          \
-  google/protobuf/compiler/csharp/csharp_generator.cc          \
-  google/protobuf/compiler/csharp/csharp_helpers.cc            \
-  google/protobuf/compiler/csharp/csharp_helpers.h             \
-  google/protobuf/compiler/csharp/csharp_map_field.cc          \
-  google/protobuf/compiler/csharp/csharp_map_field.h           \
-  google/protobuf/compiler/csharp/csharp_message.cc            \
-  google/protobuf/compiler/csharp/csharp_message.h             \
-  google/protobuf/compiler/csharp/csharp_message_field.cc      \
-  google/protobuf/compiler/csharp/csharp_message_field.h       \
-  google/protobuf/compiler/csharp/csharp_options.h             \
-  google/protobuf/compiler/csharp/csharp_primitive_field.cc    \
-  google/protobuf/compiler/csharp/csharp_primitive_field.h     \
-  google/protobuf/compiler/csharp/csharp_reflection_class.cc     \
-  google/protobuf/compiler/csharp/csharp_reflection_class.h      \
-  google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc \
-  google/protobuf/compiler/csharp/csharp_repeated_enum_field.h \
-  google/protobuf/compiler/csharp/csharp_repeated_message_field.cc \
-  google/protobuf/compiler/csharp/csharp_repeated_message_field.h \
-  google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc \
-  google/protobuf/compiler/csharp/csharp_repeated_primitive_field.h \
-  google/protobuf/compiler/csharp/csharp_source_generator_base.cc \
-  google/protobuf/compiler/csharp/csharp_source_generator_base.h \
-  google/protobuf/compiler/csharp/csharp_wrapper_field.cc      \
-  google/protobuf/compiler/csharp/csharp_wrapper_field.h
+  google/protobuf/compiler/ruby/ruby_generator.cc
 
 bin_PROGRAMS = protoc
 protoc_LDADD = $(PTHREAD_LIBS) libprotobuf.la libprotoc.la
@@ -649,7 +615,6 @@ protobuf_test_SOURCES =                                        \
   google/protobuf/compiler/cpp/metadata_test.cc                \
   google/protobuf/compiler/python/python_plugin_unittest.cc    \
   google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \
-  google/protobuf/compiler/csharp/csharp_generator_unittest.cc \
   google/protobuf/util/field_comparator_test.cc                \
   google/protobuf/util/field_mask_util_test.cc                 \
   google/protobuf/util/internal/default_value_objectwriter_test.cc \

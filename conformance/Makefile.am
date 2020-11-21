@@ -55,7 +55,6 @@ EXTRA_DIST =                  \
   conformance_python.py       \
   conformance_ruby.rb         \
   failure_list_cpp.txt        \
-  failure_list_csharp.txt     \
   failure_list_python.txt     \
   failure_list_python_cpp.txt \
   failure_list_python-post26.txt \
@@ -111,26 +110,14 @@ $(other_language_protoc_outputs): protoc_middleman
 
 BUILT_SOURCES = $(protoc_outputs) $(other_language_protoc_outputs)
 
-CLEANFILES = $(protoc_outputs) protoc_middleman conformance-csharp $(other_language_protoc_outputs)
+CLEANFILES = $(protoc_outputs) protoc_middleman $(other_language_protoc_outputs)
 
 MAINTAINERCLEANFILES =   \
   Makefile.in
 
-# Currently the conformance code is alongside the rest of the C#
-# source, as it's easier to maintain there. We assume we've already
-# built that, so we just need a script to run it.
-conformance-csharp: $(other_language_protoc_outputs)
-	@echo "Writing shortcut script conformance-csharp..."
-	@echo '#! /bin/sh' > conformance-csharp
-	@echo 'dotnet ../csharp/src/Google.Protobuf.Conformance/bin/Release/netcoreapp1.0/Google.Protobuf.Conformance.dll "$$@"' >> conformance-csharp
-	@chmod +x conformance-csharp
-
 # Targets for actually running tests.
 test_cpp: protoc_middleman conformance-test-runner conformance-cpp
 	./conformance-test-runner --enforce_recommended --failure_list failure_list_cpp.txt ./conformance-cpp
-
-test_csharp: protoc_middleman conformance-test-runner conformance-csharp
-	./conformance-test-runner --enforce_recommended --failure_list failure_list_csharp.txt ./conformance-csharp
 
 test_ruby: protoc_middleman conformance-test-runner $(other_language_protoc_outputs)
 	RUBYLIB=../ruby/lib:. ./conformance-test-runner --enforce_recommended --failure_list failure_list_ruby.txt ./conformance_ruby.rb

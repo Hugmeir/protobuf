@@ -3,7 +3,6 @@ mkdir include\google
 mkdir include\google\protobuf
 mkdir include\google\protobuf\compiler
 mkdir include\google\protobuf\compiler\cpp
-mkdir include\google\protobuf\compiler\csharp
 mkdir include\google\protobuf\compiler\js
 mkdir include\google\protobuf\compiler\php
 mkdir include\google\protobuf\compiler\python
@@ -19,8 +18,6 @@ copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\arenastring.h include\
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\code_generator.h include\google\protobuf\compiler\code_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\command_line_interface.h include\google\protobuf\compiler\command_line_interface.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\cpp\cpp_generator.h include\google\protobuf\compiler\cpp\cpp_generator.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\csharp\csharp_generator.h include\google\protobuf\compiler\csharp\csharp_generator.h
-copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\csharp\csharp_names.h include\google\protobuf\compiler\csharp\csharp_names.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\importer.h include\google\protobuf\compiler\importer.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\js\js_generator.h include\google\protobuf\compiler\js\js_generator.h
 copy ${PROTOBUF_SOURCE_WIN32_PATH}\..\src\google\protobuf\compiler\parser.h include\google\protobuf\compiler\parser.h

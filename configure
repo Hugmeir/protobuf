@@ -775,6 +775,7 @@ sysconfdir
 datadir
 datarootdir
 libexecdir
+libext
 sbindir
 bindir
 program_transform_name

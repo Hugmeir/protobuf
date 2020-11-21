@@ -266,48 +266,7 @@ am_libprotoc_la_OBJECTS = google/protobuf/compiler/code_generator.lo \
 	google/protobuf/compiler/cpp/cpp_primitive_field.lo \
 	google/protobuf/compiler/cpp/cpp_service.lo \
 	google/protobuf/compiler/cpp/cpp_string_field.lo \
-	google/protobuf/compiler/java/java_context.lo \
-	google/protobuf/compiler/java/java_enum.lo \
-	google/protobuf/compiler/java/java_enum_lite.lo \
-	google/protobuf/compiler/java/java_enum_field.lo \
-	google/protobuf/compiler/java/java_enum_field_lite.lo \
-	google/protobuf/compiler/java/java_extension.lo \
-	google/protobuf/compiler/java/java_extension_lite.lo \
-	google/protobuf/compiler/java/java_field.lo \
-	google/protobuf/compiler/java/java_file.lo \
-	google/protobuf/compiler/java/java_generator.lo \
-	google/protobuf/compiler/java/java_generator_factory.lo \
-	google/protobuf/compiler/java/java_helpers.lo \
-	google/protobuf/compiler/java/java_lazy_message_field.lo \
-	google/protobuf/compiler/java/java_lazy_message_field_lite.lo \
-	google/protobuf/compiler/java/java_map_field.lo \
-	google/protobuf/compiler/java/java_map_field_lite.lo \
-	google/protobuf/compiler/java/java_message.lo \
-	google/protobuf/compiler/java/java_message_lite.lo \
-	google/protobuf/compiler/java/java_message_builder.lo \
-	google/protobuf/compiler/java/java_message_builder_lite.lo \
-	google/protobuf/compiler/java/java_message_field.lo \
-	google/protobuf/compiler/java/java_message_field_lite.lo \
-	google/protobuf/compiler/java/java_name_resolver.lo \
-	google/protobuf/compiler/java/java_primitive_field.lo \
-	google/protobuf/compiler/java/java_primitive_field_lite.lo \
-	google/protobuf/compiler/java/java_shared_code_generator.lo \
-	google/protobuf/compiler/java/java_service.lo \
-	google/protobuf/compiler/java/java_string_field.lo \
-	google/protobuf/compiler/java/java_string_field_lite.lo \
-	google/protobuf/compiler/java/java_doc_comment.lo \
 	google/protobuf/compiler/js/js_generator.lo \
-	google/protobuf/compiler/javanano/javanano_enum.lo \
-	google/protobuf/compiler/javanano/javanano_enum_field.lo \
-	google/protobuf/compiler/javanano/javanano_extension.lo \
-	google/protobuf/compiler/javanano/javanano_field.lo \
-	google/protobuf/compiler/javanano/javanano_file.lo \
-	google/protobuf/compiler/javanano/javanano_generator.lo \
-	google/protobuf/compiler/javanano/javanano_helpers.lo \
-	google/protobuf/compiler/javanano/javanano_map_field.lo \
-	google/protobuf/compiler/javanano/javanano_message.lo \
-	google/protobuf/compiler/javanano/javanano_message_field.lo \
-	google/protobuf/compiler/javanano/javanano_primitive_field.lo \
 	google/protobuf/compiler/objectivec/objectivec_enum.lo \
 	google/protobuf/compiler/objectivec/objectivec_enum_field.lo \
 	google/protobuf/compiler/objectivec/objectivec_extension.lo \
@@ -564,8 +523,6 @@ am_protobuf_test_OBJECTS = google/protobuf/stubs/protobuf_test-bytestream_unitte
 	google/protobuf/compiler/cpp/protobuf_test-cpp_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT) \
 	google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT) \
-	google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.$(OBJEXT) \
-	google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.$(OBJEXT) \
 	google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.$(OBJEXT) \
 	google/protobuf/compiler/python/protobuf_test-python_plugin_unittest.$(OBJEXT) \
 	google/protobuf/compiler/ruby/protobuf_test-ruby_generator_unittest.$(OBJEXT) \
@@ -815,9 +772,6 @@ am__nobase_include_HEADERS_DIST =  \
 	google/protobuf/compiler/cpp/cpp_generator.h \
 	google/protobuf/compiler/csharp/csharp_generator.h \
 	google/protobuf/compiler/csharp/csharp_names.h \
-	google/protobuf/compiler/java/java_generator.h \
-	google/protobuf/compiler/java/java_names.h \
-	google/protobuf/compiler/javanano/javanano_generator.h \
 	google/protobuf/compiler/js/js_generator.h \
 	google/protobuf/compiler/objectivec/objectivec_generator.h \
 	google/protobuf/compiler/objectivec/objectivec_helpers.h \
@@ -1309,9 +1263,6 @@ nobase_include_HEADERS = \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
   google/protobuf/compiler/csharp/csharp_generator.h            \
   google/protobuf/compiler/csharp/csharp_names.h                \
-  google/protobuf/compiler/java/java_generator.h                \
-  google/protobuf/compiler/java/java_names.h                    \
-  google/protobuf/compiler/javanano/javanano_generator.h        \
   google/protobuf/compiler/js/js_generator.h                    \
   google/protobuf/compiler/objectivec/objectivec_generator.h    \
   google/protobuf/compiler/objectivec/objectivec_helpers.h      \
@@ -1488,90 +1439,7 @@ libprotoc_la_SOURCES = \
   google/protobuf/compiler/cpp/cpp_service.h                   \
   google/protobuf/compiler/cpp/cpp_string_field.cc             \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
-  google/protobuf/compiler/java/java_context.cc                \
-  google/protobuf/compiler/java/java_context.h                 \
-  google/protobuf/compiler/java/java_enum.cc                   \
-  google/protobuf/compiler/java/java_enum_lite.cc              \
-  google/protobuf/compiler/java/java_enum_field.cc             \
-  google/protobuf/compiler/java/java_enum_field.h              \
-  google/protobuf/compiler/java/java_enum_field_lite.cc        \
-  google/protobuf/compiler/java/java_enum_field_lite.h         \
-  google/protobuf/compiler/java/java_enum.h                    \
-  google/protobuf/compiler/java/java_enum_lite.h               \
-  google/protobuf/compiler/java/java_extension.cc              \
-  google/protobuf/compiler/java/java_extension.h               \
-  google/protobuf/compiler/java/java_extension_lite.cc         \
-  google/protobuf/compiler/java/java_extension_lite.h          \
-  google/protobuf/compiler/java/java_field.cc                  \
-  google/protobuf/compiler/java/java_field.h                   \
-  google/protobuf/compiler/java/java_file.cc                   \
-  google/protobuf/compiler/java/java_file.h                    \
-  google/protobuf/compiler/java/java_generator.cc              \
-  google/protobuf/compiler/java/java_generator_factory.cc      \
-  google/protobuf/compiler/java/java_generator_factory.h       \
-  google/protobuf/compiler/java/java_helpers.cc                \
-  google/protobuf/compiler/java/java_helpers.h                 \
-  google/protobuf/compiler/java/java_lazy_message_field.cc     \
-  google/protobuf/compiler/java/java_lazy_message_field.h      \
-  google/protobuf/compiler/java/java_lazy_message_field_lite.cc\
-  google/protobuf/compiler/java/java_lazy_message_field_lite.h \
-  google/protobuf/compiler/java/java_map_field.cc              \
-  google/protobuf/compiler/java/java_map_field.h               \
-  google/protobuf/compiler/java/java_map_field_lite.cc         \
-  google/protobuf/compiler/java/java_map_field_lite.h          \
-  google/protobuf/compiler/java/java_message.cc                \
-  google/protobuf/compiler/java/java_message_lite.cc           \
-  google/protobuf/compiler/java/java_message_builder.cc        \
-  google/protobuf/compiler/java/java_message_builder_lite.cc   \
-  google/protobuf/compiler/java/java_message_field.cc          \
-  google/protobuf/compiler/java/java_message_field.h           \
-  google/protobuf/compiler/java/java_message_field_lite.cc     \
-  google/protobuf/compiler/java/java_message_field_lite.h      \
-  google/protobuf/compiler/java/java_message.h                 \
-  google/protobuf/compiler/java/java_message_lite.h            \
-  google/protobuf/compiler/java/java_message_builder.h         \
-  google/protobuf/compiler/java/java_message_builder_lite.h    \
-  google/protobuf/compiler/java/java_name_resolver.cc          \
-  google/protobuf/compiler/java/java_name_resolver.h           \
-  google/protobuf/compiler/java/java_options.h                 \
-  google/protobuf/compiler/java/java_primitive_field.cc        \
-  google/protobuf/compiler/java/java_primitive_field.h         \
-  google/protobuf/compiler/java/java_primitive_field_lite.cc   \
-  google/protobuf/compiler/java/java_primitive_field_lite.h    \
-  google/protobuf/compiler/java/java_shared_code_generator.cc  \
-  google/protobuf/compiler/java/java_shared_code_generator.h   \
-  google/protobuf/compiler/java/java_service.cc                \
-  google/protobuf/compiler/java/java_service.h                 \
-  google/protobuf/compiler/java/java_string_field.cc           \
-  google/protobuf/compiler/java/java_string_field.h            \
-  google/protobuf/compiler/java/java_string_field_lite.cc      \
-  google/protobuf/compiler/java/java_string_field_lite.h       \
-  google/protobuf/compiler/java/java_doc_comment.cc            \
-  google/protobuf/compiler/java/java_doc_comment.h             \
   google/protobuf/compiler/js/js_generator.cc                  \
-  google/protobuf/compiler/javanano/javanano_enum.cc           \
-  google/protobuf/compiler/javanano/javanano_enum.h            \
-  google/protobuf/compiler/javanano/javanano_enum_field.cc     \
-  google/protobuf/compiler/javanano/javanano_enum_field.h      \
-  google/protobuf/compiler/javanano/javanano_extension.cc      \
-  google/protobuf/compiler/javanano/javanano_extension.h       \
-  google/protobuf/compiler/javanano/javanano_field.cc          \
-  google/protobuf/compiler/javanano/javanano_field.h           \
-  google/protobuf/compiler/javanano/javanano_file.cc           \
-  google/protobuf/compiler/javanano/javanano_file.h            \
-  google/protobuf/compiler/javanano/javanano_generator.cc      \
-  google/protobuf/compiler/javanano/javanano_generator.h       \
-  google/protobuf/compiler/javanano/javanano_helpers.cc        \
-  google/protobuf/compiler/javanano/javanano_helpers.h         \
-  google/protobuf/compiler/javanano/javanano_map_field.cc      \
-  google/protobuf/compiler/javanano/javanano_map_field.h       \
-  google/protobuf/compiler/javanano/javanano_message.cc        \
-  google/protobuf/compiler/javanano/javanano_message.h         \
-  google/protobuf/compiler/javanano/javanano_message_field.cc  \
-  google/protobuf/compiler/javanano/javanano_message_field.h   \
-  google/protobuf/compiler/javanano/javanano_params.h          \
-  google/protobuf/compiler/javanano/javanano_primitive_field.cc \
-  google/protobuf/compiler/javanano/javanano_primitive_field.h \
   google/protobuf/compiler/objectivec/objectivec_enum.cc       \
   google/protobuf/compiler/objectivec/objectivec_enum.h        \
   google/protobuf/compiler/objectivec/objectivec_enum_field.cc \
@@ -1885,8 +1753,6 @@ protobuf_test_SOURCES = \
   google/protobuf/compiler/cpp/cpp_unittest.cc                 \
   google/protobuf/compiler/cpp/cpp_plugin_unittest.cc          \
   google/protobuf/compiler/cpp/metadata_test.cc                \
-  google/protobuf/compiler/java/java_plugin_unittest.cc        \
-  google/protobuf/compiler/java/java_doc_comment_unittest.cc   \
   google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc \
   google/protobuf/compiler/python/python_plugin_unittest.cc    \
   google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \
@@ -2357,102 +2223,6 @@ google/protobuf/compiler/cpp/cpp_service.lo:  \
 google/protobuf/compiler/cpp/cpp_string_field.lo:  \
 	google/protobuf/compiler/cpp/$(am__dirstamp) \
 	google/protobuf/compiler/cpp/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/java
-	@: > google/protobuf/compiler/java/$(am__dirstamp)
-google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/java/$(DEPDIR)
-	@: > google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_context.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_enum.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_enum_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_enum_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_enum_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_extension.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_extension_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_file.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_generator.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_generator_factory.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_helpers.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_lazy_message_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_lazy_message_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_map_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_map_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message_builder.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message_builder_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_message_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_name_resolver.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_primitive_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_primitive_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_shared_code_generator.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_service.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_string_field.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_string_field_lite.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/java_doc_comment.lo:  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/js/$(am__dirstamp):
 	@$(MKDIR_P) google/protobuf/compiler/js
 	@: > google/protobuf/compiler/js/$(am__dirstamp)
@@ -2462,45 +2232,6 @@ google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp):
 google/protobuf/compiler/js/js_generator.lo:  \
 	google/protobuf/compiler/js/$(am__dirstamp) \
 	google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/javanano
-	@: > google/protobuf/compiler/javanano/$(am__dirstamp)
-google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) google/protobuf/compiler/javanano/$(DEPDIR)
-	@: > google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_enum.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_enum_field.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_extension.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_field.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_file.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_generator.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_helpers.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_map_field.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_message.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_message_field.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/javanano/javanano_primitive_field.lo:  \
-	google/protobuf/compiler/javanano/$(am__dirstamp) \
-	google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/objectivec/$(am__dirstamp):
 	@$(MKDIR_P) google/protobuf/compiler/objectivec
 	@: > google/protobuf/compiler/objectivec/$(am__dirstamp)
@@ -3208,12 +2939,6 @@ google/protobuf/compiler/cpp/protobuf_test-cpp_plugin_unittest.$(OBJEXT):  \
 google/protobuf/compiler/cpp/protobuf_test-metadata_test.$(OBJEXT):  \
 	google/protobuf/compiler/cpp/$(am__dirstamp) \
 	google/protobuf/compiler/cpp/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.$(OBJEXT):  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.$(OBJEXT):  \
-	google/protobuf/compiler/java/$(am__dirstamp) \
-	google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
 google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.$(OBJEXT):  \
 	google/protobuf/compiler/objectivec/$(am__dirstamp) \
 	google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
@@ -3464,10 +3189,6 @@ mostlyclean-compile:
 	-rm -f google/protobuf/compiler/cpp/*.lo
 	-rm -f google/protobuf/compiler/csharp/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/csharp/*.lo
-	-rm -f google/protobuf/compiler/java/*.$(OBJEXT)
-	-rm -f google/protobuf/compiler/java/*.lo
-	-rm -f google/protobuf/compiler/javanano/*.$(OBJEXT)
-	-rm -f google/protobuf/compiler/javanano/*.lo
 	-rm -f google/protobuf/compiler/js/*.$(OBJEXT)
 	-rm -f google/protobuf/compiler/js/*.lo
 	-rm -f google/protobuf/compiler/objectivec/*.$(OBJEXT)
@@ -3721,49 +3442,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/csharp/$(DEPDIR)/csharp_source_generator_base.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/csharp/$(DEPDIR)/csharp_wrapper_field.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/csharp/$(DEPDIR)/protobuf_test-csharp_generator_unittest.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_context.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_doc_comment.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_enum.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_enum_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_enum_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_enum_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_extension.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_extension_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_file.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_generator_factory.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_lazy_message_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_lazy_message_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_map_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_map_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message_builder.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message_builder_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_message_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_name_resolver.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_primitive_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_primitive_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_service.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_shared_code_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_string_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/java_string_field_lite.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_enum.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_enum_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_extension.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_file.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_generator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_helpers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_map_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_message.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_message_field.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/javanano/$(DEPDIR)/javanano_primitive_field.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/js/$(DEPDIR)/js_generator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_enum.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@google/protobuf/compiler/objectivec/$(DEPDIR)/objectivec_enum_field.Plo@am__quote@
@@ -6250,34 +5928,6 @@ google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj: google/protobuf/co
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/cpp/protobuf_test-metadata_test.obj `if test -f 'google/protobuf/compiler/cpp/metadata_test.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/cpp/metadata_test.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/cpp/metadata_test.cc'; fi`
 
-google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.o: google/protobuf/compiler/java/java_plugin_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.o -MD -MP -MF google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Tpo -c -o google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.o `test -f 'google/protobuf/compiler/java/java_plugin_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/java/java_plugin_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Tpo google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/java/java_plugin_unittest.cc' object='google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.o `test -f 'google/protobuf/compiler/java/java_plugin_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/java/java_plugin_unittest.cc
-
-google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.obj: google/protobuf/compiler/java/java_plugin_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.obj -MD -MP -MF google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Tpo -c -o google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.obj `if test -f 'google/protobuf/compiler/java/java_plugin_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/java/java_plugin_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/java/java_plugin_unittest.cc'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Tpo google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_plugin_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/java/java_plugin_unittest.cc' object='google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/java/protobuf_test-java_plugin_unittest.obj `if test -f 'google/protobuf/compiler/java/java_plugin_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/java/java_plugin_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/java/java_plugin_unittest.cc'; fi`
-
-google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.o: google/protobuf/compiler/java/java_doc_comment_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.o -MD -MP -MF google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Tpo -c -o google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.o `test -f 'google/protobuf/compiler/java/java_doc_comment_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/java/java_doc_comment_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Tpo google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/java/java_doc_comment_unittest.cc' object='google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.o `test -f 'google/protobuf/compiler/java/java_doc_comment_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/java/java_doc_comment_unittest.cc
-
-google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.obj: google/protobuf/compiler/java/java_doc_comment_unittest.cc
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.obj -MD -MP -MF google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Tpo -c -o google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.obj `if test -f 'google/protobuf/compiler/java/java_doc_comment_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/java/java_doc_comment_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/java/java_doc_comment_unittest.cc'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Tpo google/protobuf/compiler/java/$(DEPDIR)/protobuf_test-java_doc_comment_unittest.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='google/protobuf/compiler/java/java_doc_comment_unittest.cc' object='google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -c -o google/protobuf/compiler/java/protobuf_test-java_doc_comment_unittest.obj `if test -f 'google/protobuf/compiler/java/java_doc_comment_unittest.cc'; then $(CYGPATH_W) 'google/protobuf/compiler/java/java_doc_comment_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/google/protobuf/compiler/java/java_doc_comment_unittest.cc'; fi`
-
 google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o: google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(protobuf_test_CPPFLAGS) $(CPPFLAGS) $(protobuf_test_CXXFLAGS) $(CXXFLAGS) -MT google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o -MD -MP -MF google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo -c -o google/protobuf/compiler/objectivec/protobuf_test-objectivec_helpers_unittest.o `test -f 'google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc' || echo '$(srcdir)/'`google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Tpo google/protobuf/compiler/objectivec/$(DEPDIR)/protobuf_test-objectivec_helpers_unittest.Po
@@ -7267,8 +6917,6 @@ clean-libtool:
 	-rm -rf google/protobuf/compiler/.libs google/protobuf/compiler/_libs
 	-rm -rf google/protobuf/compiler/cpp/.libs google/protobuf/compiler/cpp/_libs
 	-rm -rf google/protobuf/compiler/csharp/.libs google/protobuf/compiler/csharp/_libs
-	-rm -rf google/protobuf/compiler/java/.libs google/protobuf/compiler/java/_libs
-	-rm -rf google/protobuf/compiler/javanano/.libs google/protobuf/compiler/javanano/_libs
 	-rm -rf google/protobuf/compiler/js/.libs google/protobuf/compiler/js/_libs
 	-rm -rf google/protobuf/compiler/objectivec/.libs google/protobuf/compiler/objectivec/_libs
 	-rm -rf google/protobuf/compiler/php/.libs google/protobuf/compiler/php/_libs
@@ -7665,10 +7313,6 @@ distclean-generic:
 	-rm -f google/protobuf/compiler/cpp/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/csharp/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/csharp/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/java/$(DEPDIR)/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/java/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/javanano/$(DEPDIR)/$(am__dirstamp)
-	-rm -f google/protobuf/compiler/javanano/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(DEPDIR)/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/js/$(am__dirstamp)
 	-rm -f google/protobuf/compiler/objectivec/$(DEPDIR)/$(am__dirstamp)
@@ -7703,7 +7347,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 	clean-libLTLIBRARIES clean-libtool clean-local mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/java/$(DEPDIR) google/protobuf/compiler/javanano/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -7750,7 +7394,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/java/$(DEPDIR) google/protobuf/compiler/javanano/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) google/protobuf/$(DEPDIR) google/protobuf/compiler/$(DEPDIR) google/protobuf/compiler/cpp/$(DEPDIR) google/protobuf/compiler/csharp/$(DEPDIR) google/protobuf/compiler/js/$(DEPDIR) google/protobuf/compiler/objectivec/$(DEPDIR) google/protobuf/compiler/php/$(DEPDIR) google/protobuf/compiler/python/$(DEPDIR) google/protobuf/compiler/ruby/$(DEPDIR) google/protobuf/io/$(DEPDIR) google/protobuf/stubs/$(DEPDIR) google/protobuf/testing/$(DEPDIR) google/protobuf/util/$(DEPDIR) google/protobuf/util/internal/$(DEPDIR) google/protobuf/util/internal/testdata/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

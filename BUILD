@@ -35,7 +35,6 @@ load(
     "cc_proto_library",
     "py_proto_library",
     "internal_copied_filegroup",
-    "internal_gen_well_known_protos_java",
     "internal_protobuf_py_tests",
 )
 
@@ -262,47 +261,6 @@ cc_library(
         "src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc",
         "src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc",
         "src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc",
-        "src/google/protobuf/compiler/java/java_context.cc",
-        "src/google/protobuf/compiler/java/java_doc_comment.cc",
-        "src/google/protobuf/compiler/java/java_enum.cc",
-        "src/google/protobuf/compiler/java/java_enum_field.cc",
-        "src/google/protobuf/compiler/java/java_enum_field_lite.cc",
-        "src/google/protobuf/compiler/java/java_enum_lite.cc",
-        "src/google/protobuf/compiler/java/java_extension.cc",
-        "src/google/protobuf/compiler/java/java_extension_lite.cc",
-        "src/google/protobuf/compiler/java/java_field.cc",
-        "src/google/protobuf/compiler/java/java_file.cc",
-        "src/google/protobuf/compiler/java/java_generator.cc",
-        "src/google/protobuf/compiler/java/java_generator_factory.cc",
-        "src/google/protobuf/compiler/java/java_helpers.cc",
-        "src/google/protobuf/compiler/java/java_lazy_message_field.cc",
-        "src/google/protobuf/compiler/java/java_lazy_message_field_lite.cc",
-        "src/google/protobuf/compiler/java/java_map_field.cc",
-        "src/google/protobuf/compiler/java/java_map_field_lite.cc",
-        "src/google/protobuf/compiler/java/java_message.cc",
-        "src/google/protobuf/compiler/java/java_message_builder.cc",
-        "src/google/protobuf/compiler/java/java_message_builder_lite.cc",
-        "src/google/protobuf/compiler/java/java_message_field.cc",
-        "src/google/protobuf/compiler/java/java_message_field_lite.cc",
-        "src/google/protobuf/compiler/java/java_message_lite.cc",
-        "src/google/protobuf/compiler/java/java_name_resolver.cc",
-        "src/google/protobuf/compiler/java/java_primitive_field.cc",
-        "src/google/protobuf/compiler/java/java_primitive_field_lite.cc",
-        "src/google/protobuf/compiler/java/java_service.cc",
-        "src/google/protobuf/compiler/java/java_shared_code_generator.cc",
-        "src/google/protobuf/compiler/java/java_string_field.cc",
-        "src/google/protobuf/compiler/java/java_string_field_lite.cc",
-        "src/google/protobuf/compiler/javanano/javanano_enum.cc",
-        "src/google/protobuf/compiler/javanano/javanano_enum_field.cc",
-        "src/google/protobuf/compiler/javanano/javanano_extension.cc",
-        "src/google/protobuf/compiler/javanano/javanano_field.cc",
-        "src/google/protobuf/compiler/javanano/javanano_file.cc",
-        "src/google/protobuf/compiler/javanano/javanano_generator.cc",
-        "src/google/protobuf/compiler/javanano/javanano_helpers.cc",
-        "src/google/protobuf/compiler/javanano/javanano_map_field.cc",
-        "src/google/protobuf/compiler/javanano/javanano_message.cc",
-        "src/google/protobuf/compiler/javanano/javanano_message_field.cc",
-        "src/google/protobuf/compiler/javanano/javanano_primitive_field.cc",
         "src/google/protobuf/compiler/js/js_generator.cc",
         "src/google/protobuf/compiler/objectivec/objectivec_enum.cc",
         "src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc",
@@ -448,8 +406,6 @@ cc_test(
         "src/google/protobuf/compiler/cpp/metadata_test.cc",
         "src/google/protobuf/compiler/csharp/csharp_generator_unittest.cc",
         "src/google/protobuf/compiler/importer_unittest.cc",
-        "src/google/protobuf/compiler/java/java_doc_comment_unittest.cc",
-        "src/google/protobuf/compiler/java/java_plugin_unittest.cc",
         "src/google/protobuf/compiler/mock_code_generator.cc",
         "src/google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc",
         "src/google/protobuf/compiler/parser_unittest.cc",
@@ -524,35 +480,6 @@ cc_test(
     ],
 )
 
-################################################################################
-# Java support
-################################################################################
-internal_gen_well_known_protos_java(
-    srcs = WELL_KNOWN_PROTOS,
-)
-
-java_library(
-    name = "protobuf_java",
-    srcs = glob([
-        "java/core/src/main/java/com/google/protobuf/*.java",
-    ]) + [
-        ":gen_well_known_protos_java",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-java_library(
-    name = "protobuf_java_util",
-    srcs = glob([
-        "java/util/src/main/java/com/google/protobuf/util/*.java",
-    ]),
-    deps = [
-        "protobuf_java",
-        "//external:gson",
-        "//external:guava",
-    ],
-    visibility = ["//visibility:public"],
-)
 
 ################################################################################
 # Python support

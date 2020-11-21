@@ -53,7 +53,7 @@ echo '
 
 $PROTOC \
     --cpp_out=$TEST_TMPDIR/testzip.zip --python_out=$TEST_TMPDIR/testzip.zip \
-    --java_out=$TEST_TMPDIR/testzip.jar -I$TEST_TMPDIR testzip.proto \
+    -I$TEST_TMPDIR testzip.proto \
     || fail 'protoc failed.'
 
 echo "Testing output to zip..."
@@ -70,22 +70,6 @@ if unzip -h > /dev/null; then
     && fail 'Zip file contained manifest.'
 else
   echo "Warning:  'unzip' command not available.  Skipping test."
-fi
-
-echo "Testing output to jar..."
-if jar c $TEST_TMPDIR/testzip.proto > /dev/null; then
-  jar tf $TEST_TMPDIR/testzip.jar > $TEST_TMPDIR/testzip.list || fail 'jar failed.'
-
-  grep '^test/jar/Foo\.java$' $TEST_TMPDIR/testzip.list > /dev/null \
-    || fail 'Foo.java not found in output jar.'
-  grep '^test/jar/Bar\.java$' $TEST_TMPDIR/testzip.list > /dev/null \
-    || fail 'Bar.java not found in output jar.'
-  grep '^test/jar/Outer\.java$' $TEST_TMPDIR/testzip.list > /dev/null \
-    || fail 'Outer.java not found in output jar.'
-  grep '^META-INF/MANIFEST\.MF$' $TEST_TMPDIR/testzip.list > /dev/null \
-    || fail 'Manifest not found in output jar.'
-else
-  echo "Warning:  'jar' command not available.  Skipping test."
 fi
 
 echo PASS

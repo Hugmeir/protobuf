@@ -21,46 +21,6 @@ other_language_protoc_outputs =                                \
   Conformance.pbobjc.h                                         \
   Conformance.pbobjc.m                                         \
   conformance_pb.rb                                            \
-  com/google/protobuf/Any.java                                 \
-  com/google/protobuf/AnyOrBuilder.java                        \
-  com/google/protobuf/AnyProto.java                            \
-  com/google/protobuf/BoolValue.java                           \
-  com/google/protobuf/BoolValueOrBuilder.java                  \
-  com/google/protobuf/BytesValue.java                          \
-  com/google/protobuf/BytesValueOrBuilder.java                 \
-  com/google/protobuf/conformance/Conformance.java             \
-  com/google/protobuf/DoubleValue.java                         \
-  com/google/protobuf/DoubleValueOrBuilder.java                \
-  com/google/protobuf/Duration.java                            \
-  com/google/protobuf/DurationOrBuilder.java                   \
-  com/google/protobuf/DurationProto.java                       \
-  com/google/protobuf/FieldMask.java                           \
-  com/google/protobuf/FieldMaskOrBuilder.java                  \
-  com/google/protobuf/FieldMaskProto.java                      \
-  com/google/protobuf/FloatValue.java                          \
-  com/google/protobuf/FloatValueOrBuilder.java                 \
-  com/google/protobuf/Int32Value.java                          \
-  com/google/protobuf/Int32ValueOrBuilder.java                 \
-  com/google/protobuf/Int64Value.java                          \
-  com/google/protobuf/Int64ValueOrBuilder.java                 \
-  com/google/protobuf/ListValue.java                           \
-  com/google/protobuf/ListValueOrBuilder.java                  \
-  com/google/protobuf/NullValue.java                           \
-  com/google/protobuf/StringValue.java                         \
-  com/google/protobuf/StringValueOrBuilder.java                \
-  com/google/protobuf/Struct.java                              \
-  com/google/protobuf/StructOrBuilder.java                     \
-  com/google/protobuf/StructProto.java                         \
-  com/google/protobuf/Timestamp.java                           \
-  com/google/protobuf/TimestampOrBuilder.java                  \
-  com/google/protobuf/TimestampProto.java                      \
-  com/google/protobuf/UInt32Value.java                         \
-  com/google/protobuf/UInt32ValueOrBuilder.java                \
-  com/google/protobuf/UInt64Value.java                         \
-  com/google/protobuf/UInt64ValueOrBuilder.java                \
-  com/google/protobuf/Value.java                               \
-  com/google/protobuf/ValueOrBuilder.java                      \
-  com/google/protobuf/WrappersProto.java                       \
   google/protobuf/any.pb.cc                                    \
   google/protobuf/any.pb.h                                     \
   google/protobuf/any.rb                                       \
@@ -85,46 +45,6 @@ other_language_protoc_outputs =                                \
   google/protobuf/wrappers.pb.h                                \
   google/protobuf/wrappers.rb                                  \
   google/protobuf/wrappers_pb2.py
-  # lite/com/google/protobuf/Any.java                            \
-  # lite/com/google/protobuf/AnyOrBuilder.java                   \
-  # lite/com/google/protobuf/AnyProto.java                       \
-  # lite/com/google/protobuf/BoolValue.java                      \
-  # lite/com/google/protobuf/BoolValueOrBuilder.java             \
-  # lite/com/google/protobuf/BytesValue.java                     \
-  # lite/com/google/protobuf/BytesValueOrBuilder.java            \
-  # lite/com/google/protobuf/conformance/Conformance.java        \
-  # lite/com/google/protobuf/DoubleValue.java                    \
-  # lite/com/google/protobuf/DoubleValueOrBuilder.java           \
-  # lite/com/google/protobuf/Duration.java                       \
-  # lite/com/google/protobuf/DurationOrBuilder.java              \
-  # lite/com/google/protobuf/DurationProto.java                  \
-  # lite/com/google/protobuf/FieldMask.java                      \
-  # lite/com/google/protobuf/FieldMaskOrBuilder.java             \
-  # lite/com/google/protobuf/FieldMaskProto.java                 \
-  # lite/com/google/protobuf/FloatValue.java                     \
-  # lite/com/google/protobuf/FloatValueOrBuilder.java            \
-  # lite/com/google/protobuf/Int32Value.java                     \
-  # lite/com/google/protobuf/Int32ValueOrBuilder.java            \
-  # lite/com/google/protobuf/Int64Value.java                     \
-  # lite/com/google/protobuf/Int64ValueOrBuilder.java            \
-  # lite/com/google/protobuf/ListValue.java                      \
-  # lite/com/google/protobuf/ListValueOrBuilder.java             \
-  # lite/com/google/protobuf/NullValue.java                      \
-  # lite/com/google/protobuf/StringValue.java                    \
-  # lite/com/google/protobuf/StringValueOrBuilder.java           \
-  # lite/com/google/protobuf/Struct.java                         \
-  # lite/com/google/protobuf/StructOrBuilder.java                \
-  # lite/com/google/protobuf/StructProto.java                    \
-  # lite/com/google/protobuf/Timestamp.java                      \
-  # lite/com/google/protobuf/TimestampOrBuilder.java             \
-  # lite/com/google/protobuf/TimestampProto.java                 \
-  # lite/com/google/protobuf/UInt32Value.java                    \
-  # lite/com/google/protobuf/UInt32ValueOrBuilder.java           \
-  # lite/com/google/protobuf/UInt64Value.java                    \
-  # lite/com/google/protobuf/UInt64ValueOrBuilder.java           \
-  # lite/com/google/protobuf/Value.java                          \
-  # lite/com/google/protobuf/ValueOrBuilder.java                 \
-  # lite/com/google/protobuf/WrappersProto.java
 
 bin_PROGRAMS = conformance-test-runner conformance-cpp
 
@@ -132,15 +52,12 @@ bin_PROGRAMS = conformance-test-runner conformance-cpp
 # here because the autoconf tools don't include files of other languages
 # automatically.
 EXTRA_DIST =                  \
-  ConformanceJava.java        \
-  ConformanceJavaLite.java    \
   README.md                   \
   conformance.proto           \
   conformance_python.py       \
   conformance_ruby.rb         \
   failure_list_cpp.txt        \
   failure_list_csharp.txt     \
-  failure_list_java.txt       \
   failure_list_objc.txt       \
   failure_list_python.txt     \
   failure_list_python_cpp.txt \
@@ -190,9 +107,9 @@ if USE_EXTERNAL_PROTOC
 
 # Some implementations include pre-generated versions of well-known types.
 protoc_middleman: $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
-	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --java_out=. --ruby_out=. --objc_out=. --python_out=. $(conformance_protoc_inputs)
-	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --java_out=. --ruby_out=. --python_out=. $(well_known_type_protoc_inputs)
-	## $(PROTOC) -I$(srcdir) -I$(top_srcdir) --java_out=lite:lite $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
+	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --ruby_out=. --objc_out=. --python_out=. $(conformance_protoc_inputs)
+	$(PROTOC) -I$(srcdir) -I$(top_srcdir) --cpp_out=. --ruby_out=. --python_out=. $(well_known_type_protoc_inputs)
+	## $(PROTOC) -I$(srcdir) -I$(top_srcdir) $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
 	touch protoc_middleman
 
 else
@@ -201,10 +118,10 @@ else
 # relative to srcdir, which may not be the same as the current directory when
 # building out-of-tree.
 protoc_middleman: $(top_srcdir)/src/protoc$(EXEEXT) $(conformance_protoc_inputs) $(well_known_type_protoc_inputs)
-	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --java_out=$$oldpwd --ruby_out=$$oldpwd --objc_out=$$oldpwd --python_out=$$oldpwd $(conformance_protoc_inputs) )
-	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --java_out=$$oldpwd --ruby_out=$$oldpwd --python_out=$$oldpwd $(well_known_type_protoc_inputs) )
+	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --ruby_out=$$oldpwd --objc_out=$$oldpwd --python_out=$$oldpwd $(conformance_protoc_inputs) )
+	oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --cpp_out=$$oldpwd --ruby_out=$$oldpwd --python_out=$$oldpwd $(well_known_type_protoc_inputs) )
 	## @mkdir -p lite
-	## oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src --java_out=lite:$$oldpwd/lite $(conformance_protoc_inputs) $(well_known_type_protoc_inputs) )
+	## oldpwd=`pwd` && ( cd $(srcdir) && $$oldpwd/../src/protoc$(EXEEXT) -I. -I$(top_srcdir)/src $(conformance_protoc_inputs) $(well_known_type_protoc_inputs) )
 	touch protoc_middleman
 
 endif
@@ -215,30 +132,10 @@ $(other_language_protoc_outputs): protoc_middleman
 
 BUILT_SOURCES = $(protoc_outputs) $(other_language_protoc_outputs)
 
-CLEANFILES = $(protoc_outputs) protoc_middleman javac_middleman conformance-java javac_middleman_lite conformance-java-lite conformance-csharp $(other_language_protoc_outputs)
+CLEANFILES = $(protoc_outputs) protoc_middleman conformance-csharp $(other_language_protoc_outputs)
 
 MAINTAINERCLEANFILES =   \
   Makefile.in
-
-javac_middleman: ConformanceJava.java protoc_middleman $(other_language_protoc_outputs)
-	jar=`ls ../java/util/target/*jar-with-dependencies.jar` && javac -classpath ../java/target/classes:$$jar ConformanceJava.java com/google/protobuf/conformance/Conformance.java
-	@touch javac_middleman
-
-conformance-java: javac_middleman
-	@echo "Writing shortcut script conformance-java..."
-	@echo '#! /bin/sh' > conformance-java
-	@jar=`ls ../java/util/target/*jar-with-dependencies.jar` && echo java -classpath .:../java/target/classes:$$jar ConformanceJava '$$@' >> conformance-java
-	@chmod +x conformance-java
-
-javac_middleman_lite: ConformanceJavaLite.java protoc_middleman $(other_language_protoc_outputs)
-	javac -classpath ../java/lite/target/classes:lite ConformanceJavaLite.java lite/com/google/protobuf/conformance/Conformance.java
-	@touch javac_middleman_lite
-
-conformance-java-lite: javac_middleman_lite
-	@echo "Writing shortcut script conformance-java-lite..."
-	@echo '#! /bin/sh' > conformance-java-lite
-	@echo java -classpath .:../java/lite/target/classes:lite ConformanceJavaLite '$$@' >> conformance-java-lite
-	@chmod +x conformance-java-lite
 
 # Currently the conformance code is alongside the rest of the C#
 # source, as it's easier to maintain there. We assume we've already
@@ -252,12 +149,6 @@ conformance-csharp: $(other_language_protoc_outputs)
 # Targets for actually running tests.
 test_cpp: protoc_middleman conformance-test-runner conformance-cpp
 	./conformance-test-runner --enforce_recommended --failure_list failure_list_cpp.txt ./conformance-cpp
-
-test_java: protoc_middleman conformance-test-runner conformance-java
-	./conformance-test-runner --enforce_recommended --failure_list failure_list_java.txt ./conformance-java
-
-test_java_lite: protoc_middleman conformance-test-runner conformance-java-lite
-	./conformance-test-runner --enforce_recommended ./conformance-java-lite
 
 test_csharp: protoc_middleman conformance-test-runner conformance-csharp
 	./conformance-test-runner --enforce_recommended --failure_list failure_list_csharp.txt ./conformance-csharp

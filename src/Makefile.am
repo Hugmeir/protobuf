@@ -157,9 +157,6 @@ nobase_include_HEADERS =                                        \
   google/protobuf/compiler/cpp/cpp_generator.h                  \
   google/protobuf/compiler/csharp/csharp_generator.h            \
   google/protobuf/compiler/csharp/csharp_names.h                \
-  google/protobuf/compiler/java/java_generator.h                \
-  google/protobuf/compiler/java/java_names.h                    \
-  google/protobuf/compiler/javanano/javanano_generator.h        \
   google/protobuf/compiler/js/js_generator.h                    \
   google/protobuf/compiler/objectivec/objectivec_generator.h    \
   google/protobuf/compiler/objectivec/objectivec_helpers.h      \
@@ -338,90 +335,7 @@ libprotoc_la_SOURCES =                                         \
   google/protobuf/compiler/cpp/cpp_service.h                   \
   google/protobuf/compiler/cpp/cpp_string_field.cc             \
   google/protobuf/compiler/cpp/cpp_string_field.h              \
-  google/protobuf/compiler/java/java_context.cc                \
-  google/protobuf/compiler/java/java_context.h                 \
-  google/protobuf/compiler/java/java_enum.cc                   \
-  google/protobuf/compiler/java/java_enum_lite.cc              \
-  google/protobuf/compiler/java/java_enum_field.cc             \
-  google/protobuf/compiler/java/java_enum_field.h              \
-  google/protobuf/compiler/java/java_enum_field_lite.cc        \
-  google/protobuf/compiler/java/java_enum_field_lite.h         \
-  google/protobuf/compiler/java/java_enum.h                    \
-  google/protobuf/compiler/java/java_enum_lite.h               \
-  google/protobuf/compiler/java/java_extension.cc              \
-  google/protobuf/compiler/java/java_extension.h               \
-  google/protobuf/compiler/java/java_extension_lite.cc         \
-  google/protobuf/compiler/java/java_extension_lite.h          \
-  google/protobuf/compiler/java/java_field.cc                  \
-  google/protobuf/compiler/java/java_field.h                   \
-  google/protobuf/compiler/java/java_file.cc                   \
-  google/protobuf/compiler/java/java_file.h                    \
-  google/protobuf/compiler/java/java_generator.cc              \
-  google/protobuf/compiler/java/java_generator_factory.cc      \
-  google/protobuf/compiler/java/java_generator_factory.h       \
-  google/protobuf/compiler/java/java_helpers.cc                \
-  google/protobuf/compiler/java/java_helpers.h                 \
-  google/protobuf/compiler/java/java_lazy_message_field.cc     \
-  google/protobuf/compiler/java/java_lazy_message_field.h      \
-  google/protobuf/compiler/java/java_lazy_message_field_lite.cc\
-  google/protobuf/compiler/java/java_lazy_message_field_lite.h \
-  google/protobuf/compiler/java/java_map_field.cc              \
-  google/protobuf/compiler/java/java_map_field.h               \
-  google/protobuf/compiler/java/java_map_field_lite.cc         \
-  google/protobuf/compiler/java/java_map_field_lite.h          \
-  google/protobuf/compiler/java/java_message.cc                \
-  google/protobuf/compiler/java/java_message_lite.cc           \
-  google/protobuf/compiler/java/java_message_builder.cc        \
-  google/protobuf/compiler/java/java_message_builder_lite.cc   \
-  google/protobuf/compiler/java/java_message_field.cc          \
-  google/protobuf/compiler/java/java_message_field.h           \
-  google/protobuf/compiler/java/java_message_field_lite.cc     \
-  google/protobuf/compiler/java/java_message_field_lite.h      \
-  google/protobuf/compiler/java/java_message.h                 \
-  google/protobuf/compiler/java/java_message_lite.h            \
-  google/protobuf/compiler/java/java_message_builder.h         \
-  google/protobuf/compiler/java/java_message_builder_lite.h    \
-  google/protobuf/compiler/java/java_name_resolver.cc          \
-  google/protobuf/compiler/java/java_name_resolver.h           \
-  google/protobuf/compiler/java/java_options.h                 \
-  google/protobuf/compiler/java/java_primitive_field.cc        \
-  google/protobuf/compiler/java/java_primitive_field.h         \
-  google/protobuf/compiler/java/java_primitive_field_lite.cc   \
-  google/protobuf/compiler/java/java_primitive_field_lite.h    \
-  google/protobuf/compiler/java/java_shared_code_generator.cc  \
-  google/protobuf/compiler/java/java_shared_code_generator.h   \
-  google/protobuf/compiler/java/java_service.cc                \
-  google/protobuf/compiler/java/java_service.h                 \
-  google/protobuf/compiler/java/java_string_field.cc           \
-  google/protobuf/compiler/java/java_string_field.h            \
-  google/protobuf/compiler/java/java_string_field_lite.cc      \
-  google/protobuf/compiler/java/java_string_field_lite.h       \
-  google/protobuf/compiler/java/java_doc_comment.cc            \
-  google/protobuf/compiler/java/java_doc_comment.h             \
   google/protobuf/compiler/js/js_generator.cc                  \
-  google/protobuf/compiler/javanano/javanano_enum.cc           \
-  google/protobuf/compiler/javanano/javanano_enum.h            \
-  google/protobuf/compiler/javanano/javanano_enum_field.cc     \
-  google/protobuf/compiler/javanano/javanano_enum_field.h      \
-  google/protobuf/compiler/javanano/javanano_extension.cc      \
-  google/protobuf/compiler/javanano/javanano_extension.h       \
-  google/protobuf/compiler/javanano/javanano_field.cc          \
-  google/protobuf/compiler/javanano/javanano_field.h           \
-  google/protobuf/compiler/javanano/javanano_file.cc           \
-  google/protobuf/compiler/javanano/javanano_file.h            \
-  google/protobuf/compiler/javanano/javanano_generator.cc      \
-  google/protobuf/compiler/javanano/javanano_generator.h       \
-  google/protobuf/compiler/javanano/javanano_helpers.cc        \
-  google/protobuf/compiler/javanano/javanano_helpers.h         \
-  google/protobuf/compiler/javanano/javanano_map_field.cc      \
-  google/protobuf/compiler/javanano/javanano_map_field.h       \
-  google/protobuf/compiler/javanano/javanano_message.cc        \
-  google/protobuf/compiler/javanano/javanano_message.h         \
-  google/protobuf/compiler/javanano/javanano_message_field.cc  \
-  google/protobuf/compiler/javanano/javanano_message_field.h   \
-  google/protobuf/compiler/javanano/javanano_params.h          \
-  google/protobuf/compiler/javanano/javanano_primitive_field.cc \
-  google/protobuf/compiler/javanano/javanano_primitive_field.h \
   google/protobuf/compiler/objectivec/objectivec_enum.cc       \
   google/protobuf/compiler/objectivec/objectivec_enum.h        \
   google/protobuf/compiler/objectivec/objectivec_enum_field.cc \
@@ -758,8 +672,6 @@ protobuf_test_SOURCES =                                        \
   google/protobuf/compiler/cpp/cpp_unittest.cc                 \
   google/protobuf/compiler/cpp/cpp_plugin_unittest.cc          \
   google/protobuf/compiler/cpp/metadata_test.cc                \
-  google/protobuf/compiler/java/java_plugin_unittest.cc        \
-  google/protobuf/compiler/java/java_doc_comment_unittest.cc   \
   google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc \
   google/protobuf/compiler/python/python_plugin_unittest.cc    \
   google/protobuf/compiler/ruby/ruby_generator_unittest.cc     \

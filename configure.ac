@@ -8,7 +8,6 @@ AC_PREREQ(2.59)
 # * csharp/Google.Protobuf.Tools.nuspec
 # * csharp/src/*/AssemblyInfo.cs
 # * csharp/src/Google.Protobuf/Google.Protobuf.nuspec
-# * java/*/pom.xml
 # * python/google/protobuf/__init__.py
 # * protoc-artifacts/pom.xml
 # * src/google/protobuf/stubs/common.h
@@ -31,7 +30,7 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_ARG_VAR(DIST_LANG, [language to include in the distribution package (i.e., make dist)])
 case "$DIST_LANG" in
   "") DIST_LANG=all ;;
-  all | cpp | csharp | java | python | javanano | objectivec | ruby | js | php) ;;
+  all | cpp | csharp | python | objectivec | ruby | js | php) ;;
   *) AC_MSG_FAILURE([unknown language: $DIST_LANG]) ;;
 esac
 AC_SUBST(DIST_LANG)

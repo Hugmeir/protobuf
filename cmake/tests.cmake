@@ -124,8 +124,6 @@ set(tests_files
   ${protobuf_source_dir}/src/google/protobuf/compiler/cpp/metadata_test.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/csharp/csharp_generator_unittest.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/importer_unittest.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/java/java_doc_comment_unittest.cc
-  ${protobuf_source_dir}/src/google/protobuf/compiler/java/java_plugin_unittest.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/mock_code_generator.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/objectivec/objectivec_helpers_unittest.cc
   ${protobuf_source_dir}/src/google/protobuf/compiler/parser_unittest.cc
